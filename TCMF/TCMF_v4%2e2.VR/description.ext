@@ -1,0 +1,138 @@
+//============================================================================================================   
+
+//Made by tb3, edited by Lord of the underworld, Oaklawyer, HawkBlade, Based God AttackingJoe, Hail Him!, and His Gloriousness thealmightyn00b for TC
+
+//============================================================================================================   
+
+
+//includes always go at the top
+#include "tb3\defines.hpp"
+
+
+//============================================================================================================   
+//MISSION MAKER THIS IS THE BLOCK YOU SHOULD EDIT!!!!!
+
+   /* Adds screen when loading. */
+   author = tb3/HawkBlade/Lord of the underworld, Oaklawyer/Based God AttackingJoe, Hail Him!/His Gloriousness thealmightyn00b;//Change to your name
+   onLoadName = "Mission Template"; //were going to laugh at you if you dont change this
+   loadScreen = "logo.paa";//no touchy, unless you know what you're doing
+   onLoadMission = "Made by tb3, edited by Lord of the underworld, Oaklawyer, HawkBlade, Based God AttackingJoe, Hail Him!, and His Gloriousness thealmightyn00b for TC";//Change to your text   
+   onLoadMissionTime = true;
+   
+   respawn = "BASE"; //Gunnah no change this k?
+   respawnDelay = 5; //Like seriously dont fuck with this
+   respawnDialog = 0; //this either
+   disabledAI = 1; //and this
+   ShowGPS = 1; //yep, you guessed it
+   enableDebugConsole = 1; //2 for all, 1 for logged in only, 0 for disabled. Leave it alone or I will cut you.
+   
+   class Header {
+      gameType = Coop;            // (https://community.bistudio.com/wiki/Multiplayer_Game_Types) for list if game types
+      minPlayers = 1;             //min # of players the mission supports, no change k bae
+      maxPlayers = 200;           //Max # of players the mission supports, no change k bae
+      playerCountMultipleOf = 1; //Unknown
+   };
+
+
+//============================================================================================================   
+//if your not sure what you are doing dont touch this code block.
+
+   class Extended_PreInit_EventHandlers {
+      class tb3 {
+         init = "call ('tb3\preInit.sqf' call SLX_XEH_COMPILE)";
+      };
+   };
+   class CfgSettings {
+      class CBA {
+         class Caching {
+            compile = 0;
+            xeh = 0;
+            functions = 0;
+         };
+      };
+   };
+   
+   class TB3_Settings {
+      class General {
+         version = 3;
+         processParams = 1;
+         enableSaving = 0;
+         missionMonitor = 1;
+         dynamicViewDistance = 1;
+         spectator = 1;
+         enableNameTags = 0; // nametags on(1) or off (0)
+         enableFlexiMenu = 0; // CBA Fleximenu options on(1) or off (0)
+      };
+   };   
+
+   
+//============================================================================================================   
+
+
+//Parameters   
+   class Params
+   {
+      class Daytime
+      {
+         title = "Time";
+         texts[] = {"Morning","Day","Evening","Night"};
+         values[] = {6,12,18,0};
+         default = 12;
+         function = "BIS_fnc_paramDaytime";
+         isGlobal = 1; 
+      };
+      class ViewDistance
+      {
+         title = "View distance (in metres)";
+         values[] = {500,1000,2000,5000};
+         default = 2000;
+         file = "parameters\setViewDistance.sqf"; 
+      };
+      class Terrain
+      {
+         title = "Set grass (density)";
+         texts[] = {"None","Low","Norm","High"};
+         values[] = {50,30,10,3.125};
+         default = 30;
+         file = "parameters\set_terrain.sqf"; 
+      };
+      /*
+      //Sample Boolean Parameter, turns a script on or off. remove the asterisk and slashes to enable.
+      class Sample
+      {
+         title = "Sample Boolean Parameter"; //The title that shows in the params selection screen
+         texts[] = {"Off","On"}; //The text options, if missing it will display the values
+         values[] = {0,1};//the possible values for the param
+         default = 1; //Default value of param
+         file = "parameters\sample.sqf"; //script to pass the value of the param to
+      };
+      */
+   };
+   
+   
+//============================================================================================================   
+   
+   
+//Separated Loadouts into its own cpp file
+//If you are just editing loadouts, you shouldn't mess with this. 
+#include "loadouts\IncludedLoadouts.cpp"
+
+
+//=============================================================================================================
+
+
+// Group marker cfg
+class CfgFunctions
+{
+   class F // Defines the "owner"
+   {
+   
+
+      class groupMarkers {
+         file = "tb3\f\groupMarkers";
+         class localGroupMarker{};
+         class localSpecialistMarker{};
+      };
+
+   };
+};
