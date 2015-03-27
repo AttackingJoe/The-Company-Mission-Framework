@@ -113,9 +113,9 @@ class USA {
 									{"rhs_mag_M661_green",2}
 									
 			// Grenades
-			#define grenade "HandGrenade"
-			#define smokegrenadewhite "SmokeShell"
-			#define smokegrenadegreen "SmokeShellGreen"
+			#define grenade "rhs_mag_m67"
+			#define smokegrenadewhite "rhs_mag_an_m8hc"
+			#define smokegrenadegreen "rhs_mag_m18_green"
 			#define handFlareRed "AGM_HandFlare_Red"
 			#define handFlareGreen "AGM_HandFlare_Green"
 			#define handFlareWhite "AGM_HandFlare_White"

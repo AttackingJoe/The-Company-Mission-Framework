@@ -54,15 +54,15 @@ class RUS {
 			
 			//Auto-Rifleman
 			#define ar "hlc_rifle_rpk"
-			#define armag "hlc_45Rnd_762x39_m_rpk"
+			#define armag "hlc_75Rnd_762x39_m_rpk"
 			
 			//Rifleman AT
 			#define rat "rhs_weap_rpg26"
 			#define ratmag "rhs_rpg26_mag"
 			
 			//Medium MG
-			#define mmg "LOP_Rifle_PKM"
-			#define mmgmag "100Rnd_LOP_762x54_T_mag"
+			#define mmg "rhs_weap_pkm"
+			#define mmgmag "rhs_100Rnd_762x54mmR_green"
 			
 			//Medium AT
 			#define mat "rhs_weap_rpg7"
@@ -397,26 +397,26 @@ class RUS {
 				magazines[] = {	}; //do not use if using specific allocation of magazines
 				backpack[] = {default_backpack};
 					backpackMagazines[] = {
-						{armag,6}
+						{armag,3}
 					};
 					backpackItems[] = {
 						agm_default,
 						{agm_sparebarrel,1},
-						{short_range,1},
 						{chemred,2}
 					};
 				headgear[] = {default_headgear};
 				uniform[] = {default_uniform};
 					uniformMagazines[] = {
+					    {armag,2}
 					};
 					uniformItems[] = {
-					    {smokegrenadewhite,2},
-						{grenade,1}
+					    {short_range,1}
 					};
 				goggles[] = {};
 				vest[] = {vest_default};
 					vestMagazines[] = {
-						{armag,4}
+					    {smokegrenadewhite,2},
+						{armag,1}
 					};
 				assignedItems[] = {default_equipment};
 				items[] = {	}; //do not use if using specific allocation of items
