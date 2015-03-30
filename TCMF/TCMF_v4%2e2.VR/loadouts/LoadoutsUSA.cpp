@@ -696,7 +696,7 @@ class USA {
 			};
 			//================Vehicle Crew==================
 			class VC {
-				weapons[] = {smg};
+				weapons[] = {smg,binoculars};
 				magazines[] = {	}; //do not use if using specific allocation of magazines
 				backpack[] = {crew_backpack};
 					backpackMagazines[] = {
