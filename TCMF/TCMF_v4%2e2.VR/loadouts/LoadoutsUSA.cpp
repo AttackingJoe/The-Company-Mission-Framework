@@ -387,7 +387,7 @@ class USA {
 				magazines[] = {	}; //do not use if using specific allocation of magazines
 				backpack[] = {default_backpack};
 					backpackMagazines[] = {
-						{armag,2}
+						{armag,1}
 					};
 					backpackItems[] = {
 						agm_default,
@@ -481,7 +481,7 @@ class USA {
 				magazines[] = {	}; //do not use if using specific allocation of magazines
 				backpack[] = {default_backpack};
 					backpackMagazines[] = {
-						{mmgmag,3}
+						{mmgmag,2}
 					};
 					backpackItems[] = {
 						agm_default,
