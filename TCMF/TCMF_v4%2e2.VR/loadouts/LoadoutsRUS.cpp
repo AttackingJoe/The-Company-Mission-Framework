@@ -10,6 +10,7 @@ class RUS {
 			//		PC			- Platoon Commander 
 			//		RTO 		- Platoon Sgt. (as Radio Operator)
 			//		SL 			- Squad leader
+			//      FO          - Forward Observer
 			//		MED 		- Medic
 			//		FTL			- Fire team leader
 			//		RIF 		- Rifleman 
@@ -132,6 +133,8 @@ class RUS {
 			#define minedetector "MineDetector"
 			#define binoculars "Binocular"
 			#define range_finder "BWA3_Vector"
+			#define laserd "Laserdesignator"
+			#define battery "Laserbatteries"
 			
 			//Radio 
 			#define long_range "ACRE_PRC148" //Long range - Short-wave
@@ -274,6 +277,38 @@ class RUS {
 						{glriflemag,8}
 					};
 				assignedItems[] = {leader_equipment};
+				items[] = {	}; //do not use if using specific allocation of items
+				
+				priKit[] = {};
+				secKit[] = {};
+			};
+			//================Forward Observer==================
+			class FO {
+				weapons[] = {smg,laserd};
+				magazines[] = {	}; //do not use if using specific allocation of magazines
+				backpack[] = {default_backpack};
+					backpackMagazines[] = {
+					    {battery,1}
+					};
+					backpackItems[] = {
+						agm_default
+					    {agm_epipen,1}
+					};
+				headgear[] = {default_headgear};
+				uniform[] = {default_uniform};
+					uniformMagazines[] = {
+					};
+					uniformItems[] = {
+					    {smokegrenadewhite,2},
+						{long_range,1},
+						{short_range,1}
+					};
+				goggles[] = {};
+				vest[] = {vest_default};
+					vestMagazines[] = {
+						{riflemag,8}
+					};
+				assignedItems[] = {default_equipment};
 				items[] = {	}; //do not use if using specific allocation of items
 				
 				priKit[] = {};

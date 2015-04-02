@@ -10,6 +10,7 @@ class USA {
 			//		PC			- Platoon Commander 
 			//		RTO 		- Platoon Sgt. (as Radio Operator)
 			//		SL 			- Squad Leader
+			//      FO          - Forward Observer
 			//		MED 		- Medic
 			//		FTL			- Fire team leader
 			//		RIF 		- Rifleman 
@@ -139,6 +140,8 @@ class USA {
 			#define minedetector "MineDetector"
 			#define binoculars "Binocular"
 			#define range_finder "BWA3_Vector"
+			#define laserd "Laserdesignator"
+			#define battery "Laserbatteries"
 			
 			//Radio 
 			#define long_range "ACRE_PRC148" //Long range - Short-wave
@@ -285,6 +288,38 @@ class USA {
 				items[] = {	}; //do not use if using specific allocation of items
 				
 				priKit[] = {holo_scope};
+				secKit[] = {};
+			};
+			//================Forward Observer==================
+			class FO {
+				weapons[] = {rifle,laserd};
+				magazines[] = {	}; //do not use if using specific allocation of magazines
+				backpack[] = {default_backpack};
+					backpackMagazines[] = {
+					    {battery,1}
+					};
+					backpackItems[] = {
+						agm_default
+					    {agm_epipen,1}
+					};
+				headgear[] = {default_headgear};
+				uniform[] = {default_uniform};
+					uniformMagazines[] = {
+					};
+					uniformItems[] = {
+					    {smokegrenadewhite,4},
+						{long_range,1},
+						{short_range,1}
+					};
+				goggles[] = {};
+				vest[] = {vest_default};
+					vestMagazines[] = {
+						{riflemag,8}
+					};
+				assignedItems[] = {default_equipment};
+				items[] = {	}; //do not use if using specific allocation of items
+				
+				priKit[] = {};
 				secKit[] = {};
 			};
 			//================Medic==================
