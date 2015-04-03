@@ -299,7 +299,7 @@ class USA {
 					    {battery,1}
 					};
 					backpackItems[] = {
-						agm_default
+						agm_default,
 					    {agm_epipen,1}
 					};
 				headgear[] = {default_headgear};
@@ -838,7 +838,7 @@ class USA {
 					backpackItems[] = {
 						agm_default,
 						{toolkit,1},
-						(agm_defuse,1},
+						{agm_defuse,1},
 						{agm_firing_device,1},
 						{explosive,6}
 					};

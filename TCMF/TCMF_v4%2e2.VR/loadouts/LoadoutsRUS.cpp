@@ -168,7 +168,7 @@ class RUS {
 			#define vest_engineer "rhs_6b23_engineer"
 			#define vest_sniper "rhs_6b23_sniper"
 			#define vest_vehiclecrew "rhs_6b23_crew"
-			#define vest_pilot ""rhs_6sh46
+			#define vest_pilot "rhs_6sh46"
 			#define vest_leader "rhs_6b23_rifleman"
 			
 			//Face
@@ -291,7 +291,7 @@ class RUS {
 					    {battery,1}
 					};
 					backpackItems[] = {
-						agm_default
+						agm_default,
 					    {agm_epipen,1}
 					};
 				headgear[] = {default_headgear};
@@ -785,7 +785,7 @@ class RUS {
 				secKit[] = {};
 			};
 			//================Pilot Helicopter==================
-			class PILJ {
+			class PILH {
 				weapons[] = {smg};
 				magazines[] = {	}; //do not use if using specific allocation of magazines
 				backpack[] = {default_backpack};
@@ -826,7 +826,7 @@ class RUS {
 					backpackItems[] = {
 						agm_default,
 						{toolkit,1},
-						(agm_defuse,1},
+						{agm_defuse,1},
 						{agm_firing_device,1},
 						{explosive,6}
 					};
