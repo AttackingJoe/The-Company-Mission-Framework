@@ -190,7 +190,7 @@ class RUS {
 					backpackItems[] = {
 						agm_default,
 						{agm_epipen,1},
-						glriflemag_tr,2},
+						{glriflemag_tr,2},
 						glmag,
 						glsmoke
 					};

@@ -529,7 +529,7 @@ class USA {
 					uniformItems[] = {
 					    {smokegrenadewhite,2},
 						{grenade,2},
-						(long_range,1),
+						{long_range,1},
 						{short_range,1}
 					};
 				goggles[] = {};
@@ -615,7 +615,7 @@ class USA {
 						{matmag,1}
 					};
 					backpackItems[] = {
-						agm_default,
+						agm_default
 					};
 				headgear[] = {default_headgear};
 				uniform[] = {default_uniform};
