@@ -1,7 +1,7 @@
 // F3 - Briefing
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-f_script_briefing = [] execVM "briefing.sqf";
+f_script_briefing = [] execVM "briefing.sqf";  // we should double check the usefulness of this, breifing shouldn't need to be called in the init.
 
 player addrating 99999; // because fuck that "player turns hostile" shit 
 
@@ -17,7 +17,6 @@ waitUntil { TB3_INIT };
 //Group Markers
 f_script_setGroupMarkers = [] execVM "tb3\f\groupMarkers\f_setLocalGroupMarkers.sqf";
 
-//[str ("ONLY USE 17 CHARS") , str(date select 1) + "." + str(date select 2) + "." + str(date select 0), str("WHERE ARE WE?!")] spawn BIS_fnc_infoText;
 
 if (isServer) then {
 
@@ -28,12 +27,8 @@ if (isServer) then {
 	
 	};
 
-		
-	// Retard prevention in spawn.
-		[] execVM "scripts\grenadeStop.sqf";
-	
 	// Building Position Indicator
 		//[] execVM "scripts\posCheck.sqf";	
-		
+
 	player switchmove "AmovPknlMstpSlowWrflDnon";
-	};
+	
