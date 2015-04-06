@@ -7,9 +7,12 @@
 
 //includes always go at the top
 #include "tb3\defines.hpp"
-
-
-//============================================================================================================   
+#include "tb3\s\spec\spectating.hpp"
+//Separated Loadouts into its own cpp file
+//If you are just editing loadouts, you shouldn't mess with this. 
+#include "loadouts\IncludedLoadouts.cpp"
+//==========================================
+==================================================================   
 //MISSION MAKER THIS IS THE BLOCK YOU SHOULD EDIT!!!!!
 
    /* Adds screen when loading. */
@@ -113,9 +116,7 @@
 //============================================================================================================   
    
    
-//Separated Loadouts into its own cpp file
-//If you are just editing loadouts, you shouldn't mess with this. 
-#include "loadouts\IncludedLoadouts.cpp"
+
 
 
 //=============================================================================================================
