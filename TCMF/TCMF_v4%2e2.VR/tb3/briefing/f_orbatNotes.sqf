@@ -1,3 +1,7 @@
+//I want to take a look at this, doesn't seem to be all that efficent. 
+
+
+
 // F3 - ORBAT Notes
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================

@@ -2,6 +2,8 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
+// ====================================================================================
+
 // DECLARE PRIVATE VARIABLES
 
 private ["_grp","_mkrType","_mkrText","_mkrColor","_mkrName","_mkr","_grpName"];
@@ -23,6 +25,7 @@ _mkrType = _this select 1;
 _mkrText = _this select 2;
 _mkrColor = _this select 3;
 _mkrName = format ["mkr_%1",_grpName];
+
 
 // ====================================================================================
 
@@ -50,152 +53,145 @@ if (isNil "_grp") then
 // EXIT FOR EMPTY GROUPS (PART I)
 // If the group is empty, this script exits.
 
-if (isnil "_grp") exitWith {};
-
+if (isnil "_grp") then
+	{
+	if (true) exitWith {};
+	}
+	else
+	{
 // ====================================================================================
-
 // CREATE MARKER
 // Depending on the value of _mkrType a different type of marker is created.
 
-switch (_mkrType) do
-{
+		switch (_mkrType) do
+		{
 
 // Platoon HQ
-	case 0:
-	{
-		_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
-		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal "b_hq";
-		_mkrName setMarkerColorLocal _mkrColor;
-		_mkrName setMarkerSizeLocal [0.8, 0.8];
-		_mkrName setMarkerTextLocal _mkrText;
-	};
+			case 0:
+			{
+				_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
+				_mkr setMarkerShapeLocal "ICON";
+				_mkrName setMarkerTypeLocal "b_hq";
+				_mkrName setMarkerColorLocal _mkrColor;
+				_mkrName setMarkerSizeLocal [0.8, 0.8];
+				_mkrName setMarkerTextLocal _mkrText;
+			};
 // Fireteam
-	case 1:
-	{
-		_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
-		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal  "b_inf";
-		_mkrName setMarkerColorLocal _mkrColor;
-		_mkrName setMarkerSizeLocal [0.8, 0.8];
-		_mkrName setMarkerTextLocal _mkrText;
-	};
+			case 1:
+			{
+				_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
+				_mkr setMarkerShapeLocal "ICON";
+				_mkrName setMarkerTypeLocal "B_INF";
+				_mkrName setMarkerColorLocal _mkrColor;
+				_mkrName setMarkerSizeLocal [0.8, 0.8];
+				_mkrName setMarkerTextLocal _mkrText;
+			};
 // Machineguns (MMG, HMG)
-	case 2:
-	{
-		_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
-		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal  "b_support";
-		_mkrName setMarkerColorLocal _mkrColor;
-		_mkrName setMarkerSizeLocal [0.8, 0.8];
-		_mkrName setMarkerTextLocal _mkrText;
-	};
+			case 2:
+			{
+				_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
+				_mkr setMarkerShapeLocal "ICON";
+				_mkrName setMarkerTypeLocal "B_SUPPORT";
+				_mkrName setMarkerColorLocal _mkrColor;
+				_mkrName setMarkerSizeLocal [0.8, 0.8];
+				_mkrName setMarkerTextLocal _mkrText;
+			};
 // Launchers (MAT, HAT, SAM)
-	case 3:
-	{
-		_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
-		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal  "b_motor_inf";
-		_mkrName setMarkerColorLocal _mkrColor;
-		_mkrName setMarkerSizeLocal [0.8, 0.8];
-		_mkrName setMarkerTextLocal _mkrText;
-	};
+			case 3:
+			{
+				_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
+				_mkr setMarkerShapeLocal "ICON";
+				_mkrName setMarkerTypeLocal "B_MOTOR_INF";
+				_mkrName setMarkerColorLocal _mkrColor;
+				_mkrName setMarkerSizeLocal [0.8, 0.8];
+				_mkrName setMarkerTextLocal _mkrText;
+			};
 // Sniper Team
-	case 4:
-	{
-		_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
-		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal  "b_recon";
-		_mkrName setMarkerColorLocal _mkrColor;
-		_mkrName setMarkerSizeLocal [0.8, 0.8];
-		_mkrName setMarkerTextLocal _mkrText;
-	};
+			case 4:
+			{
+				_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
+				_mkr setMarkerShapeLocal "ICON";
+				_mkrName setMarkerTypeLocal "B_RECON";
+				_mkrName setMarkerColorLocal _mkrColor;
+				_mkrName setMarkerSizeLocal [0.8, 0.8];
+				_mkrName setMarkerTextLocal _mkrText;
+			};
 // Mortar Team
-	case 5:
-	{
-		_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
-		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal  "b_mortar";
-		_mkrName setMarkerColorLocal _mkrColor;
-		_mkrName setMarkerSizeLocal [0.8, 0.8];
-		_mkrName setMarkerTextLocal _mkrText;
-	};
+			case 5:
+			{
+				_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
+				_mkr setMarkerShapeLocal "ICON";
+				_mkrName setMarkerTypeLocal "B_MORTAR";
+				_mkrName setMarkerColorLocal _mkrColor;
+				_mkrName setMarkerSizeLocal [0.8, 0.8];
+				_mkrName setMarkerTextLocal _mkrText;
+			};
 // Engineers
-	case 6:
-	{
-		_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
-		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal  "b_maint";
-		_mkrName setMarkerColorLocal _mkrColor;
-		_mkrName setMarkerSizeLocal [0.8, 0.8];
-		_mkrName setMarkerTextLocal _mkrText;
-	};
-// IFVs and APCs
-	case 7:
-	{
-		_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
-		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal  "b_mech_inf";
-		_mkrName setMarkerColorLocal _mkrColor;
-		_mkrName setMarkerSizeLocal [0.8, 0.8];
-		_mkrName setMarkerTextLocal _mkrText;
-	};
+			case 6:
+			{
+				_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
+				_mkr setMarkerShapeLocal "ICON";
+				_mkrName setMarkerTypeLocal "B_MAINT";
+				_mkrName setMarkerColorLocal _mkrColor;
+				_mkrName setMarkerSizeLocal [0.8, 0.8];
+				_mkrName setMarkerTextLocal _mkrText;
+			};
+// IFVs
+			case 7:
+			{
+				_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
+				_mkr setMarkerShapeLocal "ICON";
+				_mkrName setMarkerTypeLocal "b_mech_inf";
+				_mkrName setMarkerColorLocal _mkrColor;
+				_mkrName setMarkerSizeLocal [0.8, 0.8];
+				_mkrName setMarkerTextLocal _mkrText;
+			};
 // Tanks
-	case 8:
-	{
-		_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
-		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal  "b_armor";
-		_mkrName setMarkerColorLocal _mkrColor;
-		_mkrName setMarkerSizeLocal [0.8, 0.8];
-		_mkrName setMarkerTextLocal _mkrText;
-	};
+			case 8:
+			{
+				_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
+				_mkr setMarkerShapeLocal "ICON";
+				_mkrName setMarkerTypeLocal "B_ARMOR";
+				_mkrName setMarkerColorLocal _mkrColor;
+				_mkrName setMarkerSizeLocal [0.8, 0.8];
+				_mkrName setMarkerTextLocal _mkrText;
+			};
 // Transport and Attack Helos
-	case 9:
-	{
-		_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
-		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal  "b_air";
-		_mkrName setMarkerColorLocal _mkrColor;
-		_mkrName setMarkerSizeLocal [0.8, 0.8];
-		_mkrName setMarkerTextLocal _mkrText;
-	};
-// Planes and jets
-	case 10:
-	{
-		_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
-		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal  "b_plane";
-		_mkrName setMarkerColorLocal _mkrColor;
-		_mkrName setMarkerSizeLocal [0.8, 0.8];
-		_mkrName setMarkerTextLocal _mkrText;
-	};
-// Artillery
-	case 11:
-	{
-		_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
-		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal  "b_art";
-		_mkrName setMarkerColorLocal _mkrColor;
-		_mkrName setMarkerSizeLocal [0.8, 0.8];
-		_mkrName setMarkerTextLocal _mkrText;
-	};
-};
+			case 9:
+			{
+				_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
+				_mkr setMarkerShapeLocal "ICON";
+				_mkrName setMarkerTypeLocal "B_AIR";
+				_mkrName setMarkerColorLocal _mkrColor;
+				_mkrName setMarkerSizeLocal [0.8, 0.8];
+				_mkrName setMarkerTextLocal _mkrText;
+			};
+		};
 
 // ====================================================================================
 
 // UPDATE MARKER POSITION
-// As long as certain conditions are met (the group exists) the marker
+// As long as certain conditions are met (the group leader is alive) the marker
 // position is updated periodically. This only happens locally - so as not to burden
 // the server.
 
-while {{!isNull _x} count units _grp > 0} do
-{
-	_mkrName setMarkerPosLocal [(getPos leader _grp select 0),(getPos leader _grp select 1)];
-	sleep 6;
-};
-
+		for [{_i=0}, {_i<=10000}, {_i=_i+1}] do
+		{
+			if ({alive _x} count units _grp > 0) then
+			{
+			_mkrName setMarkerPosLocal [(getPos leader _grp select 0),(getPos leader _grp select 1)];
+			};
+			sleep 1.5;
+		};
 
 // ====================================================================================
 
+// EXIT FOR EMPTY GROUPS (PART II)
+// If the group is empty, this script exits.
+
+	};
+
+// ====================================================================================
+
+if (true) exitWith {};
 
