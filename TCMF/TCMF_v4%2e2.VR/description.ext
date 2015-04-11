@@ -1,6 +1,6 @@
 //============================================================================================================   
 
-//Made by tb3, edited by Lord of the underworld, Oaklawyer, HawkBlade, Based God AttackingJoe, Hail Him!, and His Gloriousness thealmightyn00b for TC
+//Made by tb3, edited by Oaklawyer, HawkBlade, AttackingJoe, and thealmightyn00b for TC
 
 //============================================================================================================   
 
@@ -16,7 +16,7 @@
 //MISSION MAKER THIS IS THE BLOCK YOU SHOULD EDIT!!!!!
 
    /* Adds screen when loading. */
-   author = tb3/HawkBlade/Lord of the underworld, Oaklawyer/Based God AttackingJoe, Hail Him!/His Gloriousness thealmightyn00b;//Change to your name
+   author = "tb3/HawkBlade/Lord of the underworld, Oaklawyer/Based God AttackingJoe, Hail Him!/His Gloriousness thealmightyn00b";//Change to your name
    onLoadName = "Mission Template"; //were going to laugh at you if you dont change this
    loadScreen = "logo.paa";//no touchy, unless you know what you're doing
    onLoadMission = "Made by tb3, edited by Lord of the underworld, Oaklawyer, HawkBlade, Based God AttackingJoe, Hail Him!, and His Gloriousness thealmightyn00b for TC";//Change to your text   
