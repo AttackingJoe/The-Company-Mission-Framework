@@ -71,7 +71,7 @@ class RUS {
 			#define glrifle "hlc_rifle_aks74_GL"
 			#define glriflemag "hlc_30Rnd_545x39_B_AK"
 			#define glriflemag_tr "hlc_30Rnd_545x39_t_ak"
-			#define glmag "hlc_VOG25_AK" //use with HLC AK's only
+			#define glmag {"hlc_VOG25_AK",15} //use with HLC AK's only
 			
 			//Marksman/Sniper
 			#define dmr "rhs_weap_svdp_wd"
@@ -186,12 +186,12 @@ class RUS {
 				magazines[] = {	}; //do not use if using specific allocation of magazines
 				backpack[] = {default_backpack};
 					backpackMagazines[] = {
-					    {glmag,15}
 					};
 					backpackItems[] = {
 						agm_default,
 						{agm_epipen,1},
 						{glriflemag_tr,2},
+						glmag,
 						glsmoke
 					};
 				headgear[] = {leader_headgear};
@@ -220,12 +220,12 @@ class RUS {
 				magazines[] = {	}; //do not use if using specific allocation of magazines
 				backpack[] = {default_backpack};
 					backpackMagazines[] = {
-					    {glmag,15}
 					};
 					backpackItems[] = {
 						agm_default,
 						{agm_epipen,1},
 						{glriflemag_tr,2},
+						glmag,
 						glsmoke
 					};
 				headgear[] = {leader_headgear};
@@ -254,12 +254,12 @@ class RUS {
 				magazines[] = {	}; //do not use if using specific allocation of magazines
 				backpack[] = {default_backpack};
 					backpackMagazines[] = {
-					    {glmag,15}
 					};
 					backpackItems[] = {
 						agm_default,
 						{agm_epipen,1},
 						{glriflemag_tr,2},
+						glmag,
 						glsmoke
 					};
 				headgear[] = {leader_headgear};
@@ -351,12 +351,12 @@ class RUS {
 				magazines[] = {	}; //do not use if using specific allocation of magazines
 				backpack[] = {default_backpack};
 					backpackMagazines[] = {
-					    {glmag,15}
 					};
 					backpackItems[] = {
 						agm_default,
 						{agm_epipen,1},
 						{glriflemag_tr,2},
+						glmag,
 						glsmoke
 					};
 				headgear[] = {leader_headgear};
@@ -365,7 +365,7 @@ class RUS {
 					};
 					uniformItems[] = {
 					    {smokegrenadewhite,2},
-						{grenade,1},
+						{grnade,1},
 						{short_range,1}
 					};
 				goggles[] = {};
