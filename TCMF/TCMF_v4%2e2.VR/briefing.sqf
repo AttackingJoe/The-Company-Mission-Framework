@@ -1,9 +1,6 @@
 waitUntil {!(isNull player)};
 waitUntil {player==player};
 
-// ORBAT Notes
-[] execVM "tb3\briefing\f_orbatNotes.sqf";
-
 //important note: double quotes (")cannot be used in the briefing text, instead us single quotes ('). double quotes end a string and if you use them it will cause errors.
 
 player createDiaryRecord ["Diary",["MISSION NOTES","
