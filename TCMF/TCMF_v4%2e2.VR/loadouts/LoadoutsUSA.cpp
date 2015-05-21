@@ -50,13 +50,16 @@ class USA {
 			#define marksman_scope "hlc_optic_LRT_m14"
 			
 			// Standard Riflemen (Assistants, Rifleman)
-			#define rifle "rhs_weap_m4a1_carryhandle"
+			#define rifle "rhs_weap_m16a4_carryhandle_grip"
 			#define riflemag "rhs_mag_30Rnd_556x45_M855A1_Stanag"
-			#define riflemag_tr "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red" 
+			#define riflemag_tr "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"
+			#define carbine "rhs_weap_m4a1_carryhandle"
+			#define carbinemag "rhs_mag_30Rnd_556x45_M855A1_Stanag"
+			#define carbinemag_tr "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"
 			
 			//Auto-Rifleman
 			#define ar "rhs_weap_m249_pip"
-			#define armag "rhsusf_200Rnd_556x45_soft_pouch" // Mixed ball-tracer
+			#define armag "rhsusf_100Rnd_556x45_soft_pouch" // Mixed ball-tracer
 			
 			//Rifleman AT
 			#define rat "rhs_weap_M136"
@@ -71,7 +74,7 @@ class USA {
 			#define matmag "rhs_fgm148_magazine_AT"
 			
 			// Rifle with GL and HE grenades - CO, DC, FTLs
-			#define glrifle "rhs_weap_m4a1_m320"
+			#define glrifle "rhs_weap_m16a4_carryhandle_M203"
 			#define glriflemag "rhs_mag_30Rnd_556x45_M855A1_Stanag"
 			#define glriflemag_tr "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"
 			#define glmag {"rhs_mag_M433_HEDP",15}
@@ -324,7 +327,7 @@ class USA {
 			};
 			//================Medic==================
 			class MED {
-				weapons[] = {rifle};
+				weapons[] = {carbine};
 				magazines[] = {	}; //do not use if using specific allocation of magazines
 				backpack[] = {default_backpack};
 					backpackMagazines[] = {
@@ -343,7 +346,7 @@ class USA {
 				goggles[] = {};
 				vest[] = {vest_medic};
 					vestMagazines[] = {
-						{riflemag,6},
+						{carbinemag,6},
 						{smokegrenadewhite,12}
 					};
 				assignedItems[] = {default_equipment};
@@ -422,7 +425,7 @@ class USA {
 				magazines[] = {	}; //do not use if using specific allocation of magazines
 				backpack[] = {default_backpack};
 					backpackMagazines[] = {
-						{armag,1}
+						{armag,4}
 					};
 					backpackItems[] = {
 						agm_default,
@@ -440,7 +443,7 @@ class USA {
 				goggles[] = {};
 				vest[] = {vest_default};
 					vestMagazines[] = {
-						{armag,2}
+						{armag,3}
 					};
 				assignedItems[] = {default_equipment};
 				items[] = {	}; //do not use if using specific allocation of items
@@ -454,7 +457,7 @@ class USA {
 				magazines[] = {	}; //do not use if using specific allocation of magazines
 				backpack[] = {default_backpack};
 					backpackMagazines[] = {
-						{armag,2}
+						{armag,4}
 					};
 					backpackItems[] = {
 						agm_default
