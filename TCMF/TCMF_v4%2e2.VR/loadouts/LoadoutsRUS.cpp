@@ -52,8 +52,8 @@ class RUS {
 			#define riflemag_tr "hlc_30Rnd_545x39_t_ak" 
 			
 			//Auto-Rifleman
-			#define ar "hlc_rifle_rpk"
-			#define armag "hlc_75Rnd_762x39_m_rpk" // Mixed tracer-ball 75 Round Mag
+			#define ar "hlc_rifle_rpk74n"
+			#define armag "hlc_45Rnd_545x39_t_rpk" // Mixed tracer-ball 75 Round Mag
 			
 			//Rifleman AT
 			#define rat "rhs_weap_rpg26"
@@ -416,7 +416,7 @@ class RUS {
 				magazines[] = {	}; //do not use if using specific allocation of magazines
 				backpack[] = {default_backpack};
 					backpackMagazines[] = {
-						{armag,3}
+						{armag,10}
 					};
 					backpackItems[] = {
 						agm_default,
@@ -434,7 +434,7 @@ class RUS {
 				goggles[] = {};
 				vest[] = {vest_default};
 					vestMagazines[] = {
-						{armag,3}
+						{armag,6}
 					};
 				assignedItems[] = {default_equipment};
 				items[] = {	}; //do not use if using specific allocation of items
@@ -448,8 +448,7 @@ class RUS {
 				magazines[] = {	}; //do not use if using specific allocation of magazines
 				backpack[] = {default_backpack};
 					backpackMagazines[] = {
-						{armag,3},
-						{riflemag,2}
+						{armag,8}
 					};
 					backpackItems[] = {
 						agm_default

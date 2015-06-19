@@ -53,13 +53,13 @@ class USA {
 			#define rifle "rhs_weap_m16a4_carryhandle_grip"
 			#define riflemag "rhs_mag_30Rnd_556x45_M855A1_Stanag"
 			#define riflemag_tr "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"
-			#define carbine "rhs_weap_m4a1_carryhandle"
+			#define carbine "rhs_weap_m4a1_carryhandle_grip2"
 			#define carbinemag "rhs_mag_30Rnd_556x45_M855A1_Stanag"
 			#define carbinemag_tr "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"
 			
 			//Auto-Rifleman
-			#define ar "rhs_weap_m249_pip"
-			#define armag "rhsusf_100Rnd_556x45_soft_pouch" // Mixed ball-tracer
+			#define ar "rhs_weap_m249_pip_L"
+			#define armag "rhs_200rnd_556x45_M_SAW" // Mixed ball-tracer
 			
 			//Rifleman AT
 			#define rat "rhs_weap_M136"
@@ -346,7 +346,7 @@ class USA {
 				goggles[] = {};
 				vest[] = {vest_medic};
 					vestMagazines[] = {
-						{carbinemag,6},
+						{carbinemag,7},
 						{smokegrenadewhite,12}
 					};
 				assignedItems[] = {default_equipment};
@@ -425,7 +425,7 @@ class USA {
 				magazines[] = {	}; //do not use if using specific allocation of magazines
 				backpack[] = {default_backpack};
 					backpackMagazines[] = {
-						{armag,4}
+						{armag,1}
 					};
 					backpackItems[] = {
 						agm_default,
@@ -457,7 +457,7 @@ class USA {
 				magazines[] = {	}; //do not use if using specific allocation of magazines
 				backpack[] = {default_backpack};
 					backpackMagazines[] = {
-						{armag,4}
+						{armag,2}
 					};
 					backpackItems[] = {
 						agm_default
@@ -538,7 +538,7 @@ class USA {
 				goggles[] = {};
 				vest[] = {vest_default};
 					vestMagazines[] = {
-						{mmgmag,2}
+						{mmgmag,3}
 					};
 				assignedItems[] = {leader_equipment};
 				items[] = {	}; //do not use if using specific allocation of items
