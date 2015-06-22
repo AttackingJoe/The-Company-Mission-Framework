@@ -7,10 +7,7 @@ class Mission
 		"A3_Modules_F",
 		"agm_medical",
 		"agm_interaction",
-		"A3_Characters_F_BLUFOR",
 		"a3_characters_f",
-		"tryk_uniform",
-		"maa_uniform",
 		"A3_Structures_F_Walls",
 		"RHS_A2_CarsImport",
 		"rhs_c_cars",
@@ -23,21 +20,19 @@ class Mission
 		"rhsusf_vehicles",
 		"rhs_c_tanks",
 		"RHS_A2_AirImport",
-		"A3_Characters_F_OPFOR",
 		"rhs_c_a2port_car",
 		"rhsusf_c_hmmwv",
 		"rhs_c_a2port_air",
-		"tpwcas"
+		"tpwcas",
+		"smillbrit_mod"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Modules_F",
 		"agm_medical",
-		"A3_Characters_F_OPFOR",
+		"smillbrit_mod",
+		"A3_Characters_F_Civil",
 		"a3_characters_f",
-		"A3_Characters_F_BLUFOR",
-		"maa_uniform",
-		"tryk_uniform",
 		"tpwcas",
 		"A3_Structures_F_Walls",
 		"rhs_c_a2port_car",
@@ -55,8 +50,8 @@ class Mission
 	randomSeed=11963703;
 	class Intel
 	{
-		briefingName="TCMF v4.3 Alpha";
-		overviewText="Made with TB3, edited by TC Mission Making Team";
+		briefingName="TCMF v4.3";
+		overviewText="Made with TB3, edited by TC/IF Mission Making Teams";
 		resistanceWest=0;
 		startWeather=0;
 		startWind=0.099999994;
@@ -75,7 +70,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=56;
+		items=57;
 		class Item0
 		{
 			side="LOGIC";
@@ -84,7 +79,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7863.896,5,7580.5493};
+					position[]={7683.7837,5,7532.6348};
 					id=0;
 					side="LOGIC";
 					vehicle="Logic";
@@ -102,7 +97,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7886.7183,5,7580.6255};
+					position[]={7706.606,5,7532.7109};
 					special="FLY";
 					id=1;
 					side="LOGIC";
@@ -121,7 +116,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7841.7188,5,7579.8599};
+					position[]={7661.6064,5,7531.9453};
 					azimut=44.333473;
 					special="NONE";
 					id=2;
@@ -142,7 +137,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7867.7749,5,7505.6753};
+					position[]={7687.6626,5,7457.7607};
 					class args
 					{
 						items=14;
@@ -248,7 +243,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7865.5698,5,7554.2407};
+					position[]={7685.4575,5,7506.3262};
 					azimut=-19.98979;
 					id=4;
 					side="LOGIC";
@@ -271,14 +266,13 @@ class Mission
 					special="NONE";
 					id=5;
 					side="EAST";
-					vehicle="O_Soldier_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitCSAT_SP";
-					init="[this,""RUS"",""SP""] call tb3_fLoadout; this setGroupId [""RECON""]; Op_RECON = group this;";
-					description="Scout";
+					init="[this,""RUS"",""SP""] call tb3_fLoadout;";
+					description="Spotter";
 				};
 				class Item1
 				{
@@ -286,12 +280,11 @@ class Mission
 					special="NONE";
 					id=6;
 					side="EAST";
-					vehicle="O_soldier_M_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					skill=0.60000002;
 					text="UnitCSAT_SN";
-					init="[this,""RUS"",""SN""] call tb3_fLoadout; this setGroupId [""RECON""]; Op_RECON = group this;";
-					description="Scout Lead";
+					init="[this,""RUS"",""SN""] call tb3_fLoadout;";
+					description="Sniper";
 				};
 			};
 		};
@@ -307,12 +300,11 @@ class Mission
 					special="NONE";
 					id=7;
 					side="EAST";
-					vehicle="O_soldier_exp_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					leader=1;
 					skill=0.60000002;
 					text="UnitCSAT_ENG1_MINE";
-					init="[this,""RUS"",""ENGMINE""] call tb3_fLoadout; this setGroupId [""ENG_MINE""]; Op_ENG_MINE = group this;";
+					init="[this,""RUS"",""ENGMINE""] call tb3_fLoadout;";
 					description="Engineer (Mines)";
 				};
 			};
@@ -329,13 +321,12 @@ class Mission
 					special="NONE";
 					id=8;
 					side="EAST";
-					vehicle="O_officer_F";
-					player="PLAY CDG";
+					vehicle="TC_L3_Red";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
 					text="UnitCSAT_CO";
-					init="[this,""RUS"",""PC""] call tb3_fLoadout; this setGroupId [""CO""]; Op_CO = group this;";
+					init="[this,""RUS"",""PC""] call tb3_fLoadout;";
 					description="Platoon Commander";
 				};
 				class Item1
@@ -344,12 +335,11 @@ class Mission
 					special="NONE";
 					id=9;
 					side="EAST";
-					vehicle="O_medic_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitCSAT_CO_M";
-					init="[this,""RUS"",""MED""] call tb3_fLoadout; this setGroupId [""CO""]; Op_CO = group this;";
+					init="[this,""RUS"",""MED""] call tb3_fLoadout;";
 					description="Platoon Medic";
 				};
 				class Item2
@@ -358,12 +348,11 @@ class Mission
 					special="NONE";
 					id=10;
 					side="EAST";
-					vehicle="O_officer_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					rank="SERGEANT";
 					skill=0.60000002;
 					text="UnitCSAT_CO_PSG";
-					init="[this,""RUS"",""RTO""] call tb3_fLoadout; this setGroupId [""CO""]; Op_CO = group this;";
+					init="[this,""RUS"",""RTO""] call tb3_fLoadout;";
 					description="PSG";
 				};
 			};
@@ -380,13 +369,12 @@ class Mission
 					special="NONE";
 					id=11;
 					side="EAST";
-					vehicle="O_Soldier_AT_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitCSAT_MAT1_G";
-					init="[this,""RUS"",""MAT""] call tb3_fLoadout; this setGroupId [""MAT1""]; Op_MAT1 = group this;";
+					init="[this,""RUS"",""MAT""] call tb3_fLoadout;";
 					description="MAT1 Gunner";
 				};
 				class Item1
@@ -395,11 +383,10 @@ class Mission
 					special="NONE";
 					id=12;
 					side="EAST";
-					vehicle="O_Soldier_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					skill=0.60000002;
 					text="UnitCSAT_MAT1_A";
-					init="[this,""RUS"",""MATA""] call tb3_fLoadout; this setGroupId [""MAT1""]; Op_MAT1 = group this;";
+					init="[this,""RUS"",""MATA""] call tb3_fLoadout;";
 					description="MAT1 Assist.";
 				};
 			};
@@ -416,13 +403,12 @@ class Mission
 					special="NONE";
 					id=13;
 					side="EAST";
-					vehicle="O_Pilot_F";
-					player="PLAY CDG";
+					vehicle="TC_L8_Red";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
 					text="UnitCSAT_TH1_P";
-					init="[this,""RUS"",""PIL""] call tb3_fLoadout; this setGroupId [""TH1""]; Op_TH1 = group this;";
+					init="[this,""RUS"",""PIL""] call tb3_fLoadout;";
 					description="TH1 Pilot";
 				};
 				class Item1
@@ -430,12 +416,11 @@ class Mission
 					position[]={1647.0214,5,7258.0806};
 					id=14;
 					side="EAST";
-					vehicle="O_Pilot_F";
-					player="PLAY CDG";
+					vehicle="TC_L8_Red";
 					rank="LIEUTENANT";
 					skill=0.60000002;
 					text="UnitCSAT_TH1_C";
-					init="[this,""RUS"",""PILR""] call tb3_fLoadout; this setGroupId [""TH1""]; Op_TH1 = group this;";
+					init="[this,""RUS"",""PILR""] call tb3_fLoadout;";
 					description="TH1 Crew Chief";
 				};
 				class Item2
@@ -444,11 +429,10 @@ class Mission
 					special="NONE";
 					id=15;
 					side="EAST";
-					vehicle="O_Pilot_F";
-					player="PLAY CDG";
+					vehicle="TC_L8_Red";
 					skill=0.60000002;
 					text="UnitCSAT_TH1_AC";
-					init="[this,""RUS"",""AIRCR""] call tb3_fLoadout; this setGroupId [""TH1""]; Op_TH1 = group this;";
+					init="[this,""RUS"",""AIRCR""] call tb3_fLoadout;";
 					description="TH1 Air Crewman";
 				};
 			};
@@ -465,12 +449,11 @@ class Mission
 					special="NONE";
 					id=16;
 					side="EAST";
-					vehicle="O_engineer_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					leader=1;
 					skill=0.60000002;
 					text="UnitCSAT_ENG1";
-					init="[this,""RUS"",""ENG""] call tb3_fLoadout; this setGroupId [""ENG1""]; Op_ENG1 = group this;";
+					init="[this,""RUS"",""ENG""] call tb3_fLoadout;";
 					description="Engineer";
 				};
 			};
@@ -487,17 +470,35 @@ class Mission
 					special="NONE";
 					id=17;
 					side="EAST";
-					vehicle="O_soldier_exp_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					leader=1;
 					skill=0.60000002;
 					text="UnitCSAT_ENG1_DEMO";
-					init="[this,""RUS"",""ENGDEMO""] call tb3_fLoadout; this setGroupId [""ENG_DEMO""]; Op_ENG_DEMO = group this;";
+					init="[this,""RUS"",""ENGDEMO""] call tb3_fLoadout;";
 					description="Engineer (Demo)";
 				};
 			};
 		};
 		class Item12
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6983.0195,5,7482.3613};
+					azimut=180;
+					id=18;
+					side="CIV";
+					vehicle="C_man_1";
+					leader=1;
+					rank="COLONEL";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item13
 		{
 			side="EAST";
 			class Vehicles
@@ -507,32 +508,30 @@ class Mission
 				{
 					position[]={1719.7955,5,7340.5225};
 					special="NONE";
-					id=18;
+					id=19;
 					side="EAST";
-					vehicle="O_Soldier_AR_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					leader=1;
 					skill=0.60000002;
 					text="UnitCSAT_MMG1_G";
-					init="[this,""RUS"",""MMG""] call tb3_fLoadout; this setGroupId [""MMG1""]; Op_MMG1 = group this;";
+					init="[this,""RUS"",""MMG""] call tb3_fLoadout;";
 					description="MMG1 Gunner";
 				};
 				class Item1
 				{
 					position[]={1722.4347,5,7338.873};
 					special="NONE";
-					id=19;
+					id=20;
 					side="EAST";
-					vehicle="O_Soldier_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					skill=0.60000002;
 					text="UnitCSAT_MMG1_A";
-					init="[this,""RUS"",""MMGA""] call tb3_fLoadout; this setGroupId [""MMG1""]; Op_MMG1 = group this;";
+					init="[this,""RUS"",""MMGA""] call tb3_fLoadout;";
 					description="MMG1 Assist.";
 				};
 			};
 		};
-		class Item13
+		class Item14
 		{
 			side="EAST";
 			class Vehicles
@@ -542,19 +541,18 @@ class Mission
 				{
 					position[]={1719.8873,5,7326.7524};
 					special="NONE";
-					id=20;
+					id=21;
 					side="EAST";
-					vehicle="O_soldier_M_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					leader=1;
 					skill=0.60000002;
 					text="UnitCSAT_MARK";
-					init="[this,""RUS"",""MARK""] call tb3_fLoadout; this setGroupId [""MARK""]; Op_MARK = group this;";
+					init="[this,""RUS"",""MARK""] call tb3_fLoadout;";
 					description="Marksman";
 				};
 			};
 		};
-		class Item14
+		class Item15
 		{
 			side="EAST";
 			class Vehicles
@@ -565,15 +563,14 @@ class Mission
 					position[]={1644.3436,5,7344.0161};
 					azimut=-359.02399;
 					special="NONE";
-					id=21;
+					id=22;
 					side="EAST";
-					vehicle="O_Soldier_SL_F";
-					player="PLAY CDG";
+					vehicle="TC_L3_Red";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
 					text="UnitCSAT_ASL";
-					init="[this,""RUS"",""SL""] call tb3_fLoadout; this setGroupId [""ASL""]; Op_ASL = group this;";
+					init="[this,""RUS"",""SL""] call tb3_fLoadout;";
 					description="A SL";
 				};
 				class Item1
@@ -581,18 +578,17 @@ class Mission
 					position[]={1647.5184,5,7341.1284};
 					azimut=-3.08742;
 					special="NONE";
-					id=22;
+					id=23;
 					side="EAST";
-					vehicle="O_medic_F";
-					player="PLAY CDG";
+					vehicle="TC_L1_Red";
 					skill=0.60000002;
 					text="UnitCSAT_ASL_M";
-					init="[this,""RUS"",""MED""] call tb3_fLoadout; this setGroupId [""ASL""]; Op_ASL = group this;";
+					init="[this,""RUS"",""MED""] call tb3_fLoadout;";
 					description="A Medic";
 				};
 			};
 		};
-		class Item15
+		class Item16
 		{
 			side="EAST";
 			class Vehicles
@@ -602,59 +598,55 @@ class Mission
 				{
 					position[]={1644.5819,5,7328.6938};
 					special="NONE";
-					id=23;
+					id=24;
 					side="EAST";
-					vehicle="O_Soldier_TL_F";
-					player="PLAY CDG";
+					vehicle="TC_L3_Red";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitCSAT_A2_FTL";
-					init="[this,""RUS"",""FTL""] call tb3_fLoadout; this setGroupId [""A2""]; Op_A2 = group this;";
+					init="[this,""RUS"",""FTL""] call tb3_fLoadout;";
 					description="A2 FTL";
 				};
 				class Item1
 				{
 					position[]={1646.5839,5,7326.0703};
 					special="NONE";
-					id=24;
+					id=25;
 					side="EAST";
-					vehicle="O_Soldier_AR_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					skill=0.60000002;
 					text="UnitCSAT_A2_AR";
-					init="[this,""RUS"",""AR""] call tb3_fLoadout; this setGroupId [""A2""]; Op_A2 = group this;";
+					init="[this,""RUS"",""AR""] call tb3_fLoadout;";
 					description="A2 AR";
 				};
 				class Item2
 				{
 					position[]={1649.9725,5,7325.9937};
 					special="NONE";
-					id=25;
+					id=26;
 					side="EAST";
-					vehicle="O_Soldier_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					skill=0.60000002;
 					text="UnitCSAT_A2_AAR";
-					init="[this,""RUS"",""ARR""] call tb3_fLoadout; this setGroupId [""A2""]; Op_A2 = group this;";
+					init="[this,""RUS"",""ARR""] call tb3_fLoadout;";
 					description="A2 AAR";
 				};
 				class Item3
 				{
 					position[]={1653.6337,5,7326.0679};
 					special="NONE";
-					id=26;
+					id=27;
 					side="EAST";
-					vehicle="O_Soldier_LAT_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					skill=0.60000002;
 					text="UnitCSAT_A2_RAT";
-					init="[this,""RUS"",""RAT""] call tb3_fLoadout; this setGroupId [""A2""]; Op_A2 = group this;";
+					init="[this,""RUS"",""RAT""] call tb3_fLoadout;";
 					description="A2 RAT";
 				};
 			};
 		};
-		class Item16
+		class Item17
 		{
 			side="EAST";
 			class Vehicles
@@ -664,46 +656,43 @@ class Mission
 				{
 					position[]={1723.6798,5,7299.9722};
 					special="NONE";
-					id=27;
+					id=28;
 					side="EAST";
-					vehicle="O_crew_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitCSAT_TNK1_VC";
-					init="[this,""RUS"",""VC""] call tb3_fLoadout; this setGroupId [""TNK1""]; Op_TNK1 = group this;";
+					init="[this,""RUS"",""VC""] call tb3_fLoadout;";
 					description="TANK1 Commander";
 				};
 				class Item1
 				{
 					position[]={1727.9132,5,7296.2124};
 					special="NONE";
-					id=28;
+					id=29;
 					side="EAST";
-					vehicle="O_crew_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					skill=0.60000002;
 					text="UnitCSAT_TNK1_D";
-					init="[this,""RUS"",""VD""] call tb3_fLoadout; this setGroupId [""TNK1""]; Op_TNK1 = group this;";
+					init="[this,""RUS"",""VD""] call tb3_fLoadout;";
 					description="TANK1 Driver";
 				};
 				class Item2
 				{
 					position[]={1725.7013,5,7297.9512};
 					special="NONE";
-					id=29;
+					id=30;
 					side="EAST";
-					vehicle="O_crew_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					skill=0.60000002;
 					text="UnitCSAT_TNK1_G";
-					init="[this,""RUS"",""VG""] call tb3_fLoadout; this setGroupId [""TNK1""]; Op_TNK1 = group this;";
+					init="[this,""RUS"",""VG""] call tb3_fLoadout;";
 					description="TANK1 Gunner";
 				};
 			};
 		};
-		class Item17
+		class Item18
 		{
 			side="EAST";
 			class Vehicles
@@ -713,59 +702,55 @@ class Mission
 				{
 					position[]={1643.5985,5,7337.083};
 					special="NONE";
-					id=30;
+					id=31;
 					side="EAST";
-					vehicle="O_Soldier_TL_F";
-					player="PLAY CDG";
+					vehicle="TC_L3_Red";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitCSAT_A1_FTL";
-					init="[this,""RUS"",""FTL""] call tb3_fLoadout; this setGroupId [""A1""]; Op_A1 = group this;";
+					init="[this,""RUS"",""FTL""] call tb3_fLoadout;";
 					description="A1 FTL";
 				};
 				class Item1
 				{
 					position[]={1645.9745,5,7334.0845};
 					special="NONE";
-					id=31;
+					id=32;
 					side="EAST";
-					vehicle="O_Soldier_AR_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					skill=0.60000002;
 					text="UnitCSAT_A1_AR";
-					init="[this,""RUS"",""AR""] call tb3_fLoadout; this setGroupId [""A1""]; Op_A1 = group this;";
+					init="[this,""RUS"",""AR""] call tb3_fLoadout;";
 					description="A1 AR";
 				};
 				class Item2
 				{
 					position[]={1649.1376,5,7334.0835};
 					special="NONE";
-					id=32;
+					id=33;
 					side="EAST";
-					vehicle="O_Soldier_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					skill=0.60000002;
 					text="UnitCSAT_A1_AAR";
-					init="[this,""RUS"",""ARR""] call tb3_fLoadout; this setGroupId [""A1""]; Op_A1 = group this;";
+					init="[this,""RUS"",""ARR""] call tb3_fLoadout;";
 					description="A1 AAR";
 				};
 				class Item3
 				{
 					position[]={1652.7997,5,7334.082};
 					special="NONE";
-					id=33;
+					id=34;
 					side="EAST";
-					vehicle="O_Soldier_LAT_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					skill=0.60000002;
 					text="UnitCSAT_A1_RAT";
-					init="[this,""RUS"",""RAT""] call tb3_fLoadout; this setGroupId [""A1""]; Op_A1 = group this;";
+					init="[this,""RUS"",""RAT""] call tb3_fLoadout;";
 					description="A1 RAT";
 				};
 			};
 		};
-		class Item18
+		class Item19
 		{
 			side="EAST";
 			class Vehicles
@@ -776,15 +761,14 @@ class Mission
 					position[]={1670.0526,5,7344.0161};
 					azimut=-359.02399;
 					special="NONE";
-					id=34;
+					id=35;
 					side="EAST";
-					vehicle="O_Soldier_SL_F";
-					player="PLAY CDG";
+					vehicle="TC_L3_Red";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
 					text="UnitCSAT_BSL";
-					init="[this,""RUS"",""SL""] call tb3_fLoadout; this setGroupId [""BSL""]; Op_BSL = group this;";
+					init="[this,""RUS"",""SL""] call tb3_fLoadout;";
 					description="B SL";
 				};
 				class Item1
@@ -792,76 +776,13 @@ class Mission
 					position[]={1673.2264,5,7341.1284};
 					azimut=-3.08742;
 					special="NONE";
-					id=35;
-					side="EAST";
-					vehicle="O_medic_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCSAT_BSL_M";
-					init="[this,""RUS"",""MED""] call tb3_fLoadout; this setGroupId [""BSL""]; Op_BSL = group this;";
-					description="B Medic";
-				};
-			};
-		};
-		class Item19
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={1670.2899,5,7328.6938};
-					special="NONE";
 					id=36;
 					side="EAST";
-					vehicle="O_Soldier_TL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
+					vehicle="TC_L4_Red";
 					skill=0.60000002;
-					text="UnitCSAT_B2_FTL";
-					init="[this,""RUS"",""FTL""] call tb3_fLoadout; this setGroupId [""B2""]; Op_B2 = group this;";
-					description="B2 FTL";
-				};
-				class Item1
-				{
-					position[]={1672.2919,5,7326.0703};
-					special="NONE";
-					id=37;
-					side="EAST";
-					vehicle="O_Soldier_AR_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCSAT_B2_AR";
-					init="[this,""RUS"",""AR""] call tb3_fLoadout; this setGroupId [""B2""]; Op_B2 = group this;";
-					description="B2 AR";
-				};
-				class Item2
-				{
-					position[]={1675.6805,5,7325.9937};
-					special="NONE";
-					id=38;
-					side="EAST";
-					vehicle="O_Soldier_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCSAT_B2_AAR";
-					init="[this,""RUS"",""ARR""] call tb3_fLoadout; this setGroupId [""B2""]; Op_B2 = group this;";
-					description="B2 AAR";
-				};
-				class Item3
-				{
-					position[]={1679.3427,5,7326.0679};
-					special="NONE";
-					id=39;
-					side="EAST";
-					vehicle="O_Soldier_LAT_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCSAT_B2_RAT";
-					init="[this,""RUS"",""RAT""] call tb3_fLoadout; this setGroupId [""B2""]; Op_B2 = group this;";
-					description="B2 RAT";
+					text="UnitCSAT_BSL_M";
+					init="[this,""RUS"",""MED""] call tb3_fLoadout;";
+					description="B Medic";
 				};
 			};
 		};
@@ -873,61 +794,115 @@ class Mission
 				items=4;
 				class Item0
 				{
-					position[]={1669.3075,5,7337.083};
+					position[]={1670.2899,5,7328.6938};
+					special="NONE";
+					id=37;
+					side="EAST";
+					vehicle="TC_L4_Red";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.60000002;
+					text="UnitCSAT_B2_FTL";
+					init="[this,""RUS"",""FTL""] call tb3_fLoadout;";
+					description="B2 FTL";
+				};
+				class Item1
+				{
+					position[]={1672.2919,5,7326.0703};
+					special="NONE";
+					id=38;
+					side="EAST";
+					vehicle="TC_L4_Red";
+					skill=0.60000002;
+					text="UnitCSAT_B2_AR";
+					init="[this,""RUS"",""AR""] call tb3_fLoadout;";
+					description="B2 AR";
+				};
+				class Item2
+				{
+					position[]={1675.6805,5,7325.9937};
+					special="NONE";
+					id=39;
+					side="EAST";
+					vehicle="TC_L4_Red";
+					skill=0.60000002;
+					text="UnitCSAT_B2_AAR";
+					init="[this,""RUS"",""ARR""] call tb3_fLoadout;";
+					description="B2 AAR";
+				};
+				class Item3
+				{
+					position[]={1679.3427,5,7326.0679};
 					special="NONE";
 					id=40;
 					side="EAST";
-					vehicle="O_Soldier_TL_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
+					skill=0.60000002;
+					text="UnitCSAT_B2_RAT";
+					init="[this,""RUS"",""RAT""] call tb3_fLoadout;";
+					description="B2 RAT";
+				};
+			};
+		};
+		class Item21
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={1669.3075,5,7337.083};
+					special="NONE";
+					id=41;
+					side="EAST";
+					vehicle="TC_L3_Red";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitCSAT_B1_FTL";
-					init="[this,""RUS"",""FTL""] call tb3_fLoadout; this setGroupId [""B1""]; Op_B1 = group this;";
+					init="[this,""RUS"",""FTL""] call tb3_fLoadout;";
 					description="B1 FTL";
 				};
 				class Item1
 				{
 					position[]={1671.6825,5,7334.0845};
 					special="NONE";
-					id=41;
+					id=42;
 					side="EAST";
-					vehicle="O_Soldier_AR_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					skill=0.60000002;
 					text="UnitCSAT_B1_AR";
-					init="[this,""RUS"",""AR""] call tb3_fLoadout; this setGroupId [""B1""]; Op_B1 = group this;";
+					init="[this,""RUS"",""AR""] call tb3_fLoadout;";
 					description="B1 AR";
 				};
 				class Item2
 				{
 					position[]={1674.8466,5,7334.0835};
 					special="NONE";
-					id=42;
+					id=43;
 					side="EAST";
-					vehicle="O_Soldier_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					skill=0.60000002;
 					text="UnitCSAT_B1_AAR";
-					init="[this,""RUS"",""ARR""] call tb3_fLoadout; this setGroupId [""B1""]; Op_B1 = group this;";
+					init="[this,""RUS"",""ARR""] call tb3_fLoadout;";
 					description="B1 AAR";
 				};
 				class Item3
 				{
 					position[]={1678.5087,5,7334.082};
 					special="NONE";
-					id=43;
+					id=44;
 					side="EAST";
-					vehicle="O_Soldier_LAT_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					skill=0.60000002;
 					text="UnitCSAT_B1_RAT";
-					init="[this,""RUS"",""RAT""] call tb3_fLoadout; this setGroupId [""B1""]; Op_B1 = group this;";
+					init="[this,""RUS"",""RAT""] call tb3_fLoadout;";
 					description="B1 RAT";
 				};
 			};
 		};
-		class Item21
+		class Item22
 		{
 			side="EAST";
 			class Vehicles
@@ -938,15 +913,14 @@ class Mission
 					position[]={1696.6188,5,7344.2065};
 					azimut=-359.02399;
 					special="NONE";
-					id=44;
+					id=45;
 					side="EAST";
-					vehicle="O_Soldier_SL_F";
-					player="PLAY CDG";
+					vehicle="TC_L3_Red";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
 					text="UnitCSAT_CSL";
-					init="[this,""RUS"",""SL""] call tb3_fLoadout; this setGroupId [""CSL""]; Op_CSL = group this;";
+					init="[this,""RUS"",""SL""] call tb3_fLoadout;";
 					description="C SL";
 				};
 				class Item1
@@ -954,76 +928,13 @@ class Mission
 					position[]={1699.7931,5,7341.3188};
 					azimut=-3.08742;
 					special="NONE";
-					id=45;
-					side="EAST";
-					vehicle="O_medic_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCSAT_CSL_M";
-					init="[this,""RUS"",""MED""] call tb3_fLoadout; this setGroupId [""CSL""]; Op_CSL = group this;";
-					description="C Medic";
-				};
-			};
-		};
-		class Item22
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={1696.8566,5,7328.8843};
-					special="NONE";
 					id=46;
 					side="EAST";
-					vehicle="O_Soldier_TL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
+					vehicle="TC_L4_Red";
 					skill=0.60000002;
-					text="UnitCSAT_C2_FTL";
-					init="[this,""RUS"",""FTL""] call tb3_fLoadout; this setGroupId [""C2""]; Op_C2 = group this;";
-					description="C2 FTL";
-				};
-				class Item1
-				{
-					position[]={1698.8585,5,7326.2607};
-					special="NONE";
-					id=47;
-					side="EAST";
-					vehicle="O_Soldier_AR_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCSAT_C2_AR";
-					init="[this,""RUS"",""AR""] call tb3_fLoadout; this setGroupId [""C2""]; Op_C2 = group this;";
-					description="C2 AR";
-				};
-				class Item2
-				{
-					position[]={1702.2472,5,7326.1841};
-					special="NONE";
-					id=48;
-					side="EAST";
-					vehicle="O_Soldier_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCSAT_C2_AAR";
-					init="[this,""RUS"",""ARR""] call tb3_fLoadout; this setGroupId [""C2""]; Op_C2 = group this;";
-					description="C2 AAR";
-				};
-				class Item3
-				{
-					position[]={1705.9088,5,7326.2583};
-					special="NONE";
-					id=49;
-					side="EAST";
-					vehicle="O_Soldier_LAT_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCSAT_C2_RAT";
-					init="[this,""RUS"",""RAT""] call tb3_fLoadout; this setGroupId [""C2""]; Op_C2 = group this;";
-					description="C2 RAT";
+					text="UnitCSAT_CSL_M";
+					init="[this,""RUS"",""MED""] call tb3_fLoadout;";
+					description="C Medic";
 				};
 			};
 		};
@@ -1035,57 +946,53 @@ class Mission
 				items=4;
 				class Item0
 				{
-					position[]={1695.8737,5,7337.2734};
+					position[]={1696.8566,5,7328.8843};
 					special="NONE";
-					id=50;
+					id=47;
 					side="EAST";
-					vehicle="O_Soldier_TL_F";
-					player="PLAY CDG";
+					vehicle="TC_L3_Red";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
-					text="UnitCSAT_C1_FTL";
-					init="[this,""RUS"",""FTL""] call tb3_fLoadout; this setGroupId [""C1""]; Op_C1 = group this;";
-					description="C1 FTL";
+					text="UnitCSAT_C2_FTL";
+					init="[this,""RUS"",""FTL""] call tb3_fLoadout;";
+					description="C2 FTL";
 				};
 				class Item1
 				{
-					position[]={1698.2491,5,7334.2749};
+					position[]={1698.8585,5,7326.2607};
 					special="NONE";
-					id=51;
+					id=48;
 					side="EAST";
-					vehicle="O_Soldier_AR_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					skill=0.60000002;
-					text="UnitCSAT_C1_AR";
-					init="[this,""RUS"",""AR""] call tb3_fLoadout; this setGroupId [""C1""]; Op_C1 = group this;";
-					description="C1 AR";
+					text="UnitCSAT_C2_AR";
+					init="[this,""RUS"",""AR""] call tb3_fLoadout;";
+					description="C2 AR";
 				};
 				class Item2
 				{
-					position[]={1701.4127,5,7334.2739};
+					position[]={1702.2472,5,7326.1841};
 					special="NONE";
-					id=52;
+					id=49;
 					side="EAST";
-					vehicle="O_Soldier_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					skill=0.60000002;
-					text="UnitCSAT_C1_AAR";
-					init="[this,""RUS"",""ARR""] call tb3_fLoadout; this setGroupId [""C1""]; Op_C1 = group this;";
-					description="C1 AAR";
+					text="UnitCSAT_C2_AAR";
+					init="[this,""RUS"",""ARR""] call tb3_fLoadout;";
+					description="C2 AAR";
 				};
 				class Item3
 				{
-					position[]={1705.0748,5,7334.2725};
+					position[]={1705.9088,5,7326.2583};
 					special="NONE";
-					id=53;
+					id=50;
 					side="EAST";
-					vehicle="O_Soldier_LAT_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					skill=0.60000002;
-					text="UnitCSAT_C1_RAT";
-					init="[this,""RUS"",""RAT""] call tb3_fLoadout; this setGroupId [""C1""]; Op_C1 = group this;";
-					description="C1 RAT";
+					text="UnitCSAT_C2_RAT";
+					init="[this,""RUS"",""RAT""] call tb3_fLoadout;";
+					description="C2 RAT";
 				};
 			};
 		};
@@ -1094,47 +1001,56 @@ class Mission
 			side="EAST";
 			class Vehicles
 			{
-				items=3;
+				items=4;
 				class Item0
 				{
-					position[]={1645.9589,5,7299.0093};
+					position[]={1695.8737,5,7337.2734};
 					special="NONE";
-					id=54;
+					id=51;
 					side="EAST";
-					vehicle="O_crew_F";
-					player="PLAY CDG";
+					vehicle="TC_L3_Red";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
-					text="UnitCSAT_IFV1_VC";
-					init="[this,""RUS"",""VC""] call tb3_fLoadout; this setGroupId [""IFV1""]; Op_IFV1 = group this;";
-					description="IFV1 Commander";
+					text="UnitCSAT_C1_FTL";
+					init="[this,""RUS"",""FTL""] call tb3_fLoadout;";
+					description="C1 FTL";
 				};
 				class Item1
 				{
-					position[]={1647.788,5,7297.4795};
+					position[]={1698.2491,5,7334.2749};
 					special="NONE";
-					id=55;
+					id=52;
 					side="EAST";
-					vehicle="O_crew_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					skill=0.60000002;
-					text="UnitCSAT_IFV1_G";
-					init="[this,""RUS"",""VG""] call tb3_fLoadout; this setGroupId [""IFV1""]; Op_IFV1 = group this;";
-					description="IFV1 Gunner";
+					text="UnitCSAT_C1_AR";
+					init="[this,""RUS"",""AR""] call tb3_fLoadout;";
+					description="C1 AR";
 				};
 				class Item2
 				{
-					position[]={1649.7772,5,7295.833};
+					position[]={1701.4127,5,7334.2739};
 					special="NONE";
-					id=56;
+					id=53;
 					side="EAST";
-					vehicle="O_crew_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					skill=0.60000002;
-					text="UnitCSAT_IFV1_D";
-					init="[this,""RUS"",""VD""] call tb3_fLoadout; this setGroupId [""IFV1""]; Op_IFV1 = group this;";
-					description="IFV1 Driver";
+					text="UnitCSAT_C1_AAR";
+					init="[this,""RUS"",""ARR""] call tb3_fLoadout;";
+					description="C1 AAR";
+				};
+				class Item3
+				{
+					position[]={1705.0748,5,7334.2725};
+					special="NONE";
+					id=54;
+					side="EAST";
+					vehicle="TC_L4_Red";
+					skill=0.60000002;
+					text="UnitCSAT_C1_RAT";
+					init="[this,""RUS"",""RAT""] call tb3_fLoadout;";
+					description="C1 RAT";
 				};
 			};
 		};
@@ -1146,44 +1062,41 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={1671.4628,5,7299.1782};
+					position[]={1645.9589,5,7299.0093};
 					special="NONE";
-					id=57;
+					id=55;
 					side="EAST";
-					vehicle="O_crew_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
-					text="UnitCSAT_IFV2_VC";
-					init="[this,""RUS"",""VC""] call tb3_fLoadout; this setGroupId [""IFV2""]; Op_IFV2 = group this;";
-					description="IFV2 Commander";
+					text="UnitCSAT_IFV1_VC";
+					init="[this,""RUS"",""VC""] call tb3_fLoadout;";
+					description="IFV1 Commander";
 				};
 				class Item1
 				{
-					position[]={1673.2919,5,7297.6484};
+					position[]={1647.788,5,7297.4795};
 					special="NONE";
-					id=58;
+					id=56;
 					side="EAST";
-					vehicle="O_crew_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					skill=0.60000002;
-					text="UnitCSAT_IFV2_G";
-					init="[this,""RUS"",""VG""] call tb3_fLoadout; this setGroupId [""IFV2""]; Op_IFV2 = group this;";
-					description="IFV2 Gunner";
+					text="UnitCSAT_IFV1_G";
+					init="[this,""RUS"",""VG""] call tb3_fLoadout;";
+					description="IFV1 Gunner";
 				};
 				class Item2
 				{
-					position[]={1675.2811,5,7296.002};
+					position[]={1649.7772,5,7295.833};
 					special="NONE";
-					id=59;
+					id=57;
 					side="EAST";
-					vehicle="O_crew_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					skill=0.60000002;
-					text="UnitCSAT_IFV2_D";
-					init="[this,""RUS"",""VD""] call tb3_fLoadout; this setGroupId [""IFV2""]; Op_IFV2 = group this;";
-					description="IFV2 Driver";
+					text="UnitCSAT_IFV1_D";
+					init="[this,""RUS"",""VD""] call tb3_fLoadout;";
+					description="IFV1 Driver";
 				};
 			};
 		};
@@ -1195,44 +1108,41 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={1698.1495,5,7299.1787};
+					position[]={1671.4628,5,7299.1782};
 					special="NONE";
-					id=60;
+					id=58;
 					side="EAST";
-					vehicle="O_crew_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
-					text="UnitCSAT_IFV3_VC";
-					init="[this,""RUS"",""VC""] call tb3_fLoadout; this setGroupId [""IFV3""]; Op_IFV3 = group this;";
-					description="IFV3 Commander";
+					text="UnitCSAT_IFV2_VC";
+					init="[this,""RUS"",""VC""] call tb3_fLoadout;";
+					description="IFV2 Commander";
 				};
 				class Item1
 				{
-					position[]={1699.9791,5,7297.6489};
+					position[]={1673.2919,5,7297.6484};
 					special="NONE";
-					id=61;
+					id=59;
 					side="EAST";
-					vehicle="O_crew_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					skill=0.60000002;
-					text="UnitCSAT_IFV3_G";
-					init="[this,""RUS"",""VG""] call tb3_fLoadout; this setGroupId [""IFV3""]; Op_IFV3 = group this;";
-					description="IFV3 Gunner";
+					text="UnitCSAT_IFV2_G";
+					init="[this,""RUS"",""VG""] call tb3_fLoadout;";
+					description="IFV2 Gunner";
 				};
 				class Item2
 				{
-					position[]={1701.9679,5,7296.0024};
+					position[]={1675.2811,5,7296.002};
 					special="NONE";
-					id=62;
+					id=60;
 					side="EAST";
-					vehicle="O_crew_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					skill=0.60000002;
-					text="UnitCSAT_IFV3_D";
-					init="[this,""RUS"",""VD""] call tb3_fLoadout; this setGroupId [""IFV3""]; Op_IFV3 = group this;;";
-					description="IFV3 Driver";
+					text="UnitCSAT_IFV2_D";
+					init="[this,""RUS"",""VD""] call tb3_fLoadout;";
+					description="IFV2 Driver";
 				};
 			};
 		};
@@ -1244,44 +1154,41 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={1672.9149,5,7259.2192};
+					position[]={1698.1495,5,7299.1787};
 					special="NONE";
-					id=63;
+					id=61;
 					side="EAST";
-					vehicle="O_Pilot_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					leader=1;
-					rank="LIEUTENANT";
+					rank="CORPORAL";
 					skill=0.60000002;
-					text="UnitCSAT_TH2_P";
-					init="[this,""RUS"",""PIL""] call tb3_fLoadout; this setGroupId [""TH2""]; Op_TH2 = group this;";
-					description="TH2 Pilot";
+					text="UnitCSAT_IFV3_VC";
+					init="[this,""RUS"",""VC""] call tb3_fLoadout;";
+					description="IFV3 Commander";
 				};
 				class Item1
 				{
-					position[]={1674.3016,5,7257.668};
-					id=64;
+					position[]={1699.9791,5,7297.6489};
+					special="NONE";
+					id=62;
 					side="EAST";
-					vehicle="O_Pilot_F";
-					player="PLAY CDG";
-					rank="LIEUTENANT";
+					vehicle="TC_L4_Red";
 					skill=0.60000002;
-					text="UnitCSAT_TH2_C";
-					init="[this,""RUS"",""PILR""] call tb3_fLoadout; this setGroupId [""TH2""]; Op_TH2 = group this;";
-					description="TH2 Crew Chief";
+					text="UnitCSAT_IFV3_G";
+					init="[this,""RUS"",""VG""] call tb3_fLoadout;";
+					description="IFV3 Gunner";
 				};
 				class Item2
 				{
-					position[]={1675.91,5,7256.0718};
+					position[]={1701.9679,5,7296.0024};
 					special="NONE";
-					id=65;
+					id=63;
 					side="EAST";
-					vehicle="O_Pilot_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					skill=0.60000002;
-					text="UnitCSAT_TH2_AC";
-					init="[this,""RUS"",""AIRCR""] call tb3_fLoadout; this setGroupId [""TH2""]; Op_TH2 = group this;";
-					description="TH2 Air Crewman";
+					text="UnitCSAT_IFV3_D";
+					init="[this,""RUS"",""VD""] call tb3_fLoadout;";
+					description="IFV3 Driver";
 				};
 			};
 		};
@@ -1293,48 +1200,91 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={1699.7819,5,7259.5142};
+					position[]={1672.9149,5,7259.2192};
+					special="NONE";
+					id=64;
+					side="EAST";
+					vehicle="TC_L8_Red";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					text="UnitCSAT_TH2_P";
+					init="[this,""RUS"",""PIL""] call tb3_fLoadout;";
+					description="TH2 Pilot";
+				};
+				class Item1
+				{
+					position[]={1674.3016,5,7257.668};
+					id=65;
+					side="EAST";
+					vehicle="TC_L8_Red";
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					text="UnitCSAT_TH2_C";
+					init="[this,""RUS"",""PILR""] call tb3_fLoadout;";
+					description="TH2 Crew Chief";
+				};
+				class Item2
+				{
+					position[]={1675.91,5,7256.0718};
 					special="NONE";
 					id=66;
 					side="EAST";
-					vehicle="O_Pilot_F";
-					player="PLAY CDG";
+					vehicle="TC_L8_Red";
+					skill=0.60000002;
+					text="UnitCSAT_TH2_AC";
+					init="[this,""RUS"",""AIRCR""] call tb3_fLoadout;";
+					description="TH2 Air Crewman";
+				};
+			};
+		};
+		class Item29
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={1699.7819,5,7259.5142};
+					special="NONE";
+					id=67;
+					side="EAST";
+					vehicle="TC_L8_Red";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
 					text="UnitCSAT_TH3_P";
-					init="[this,""RUS"",""PIL""] call tb3_fLoadout; this setGroupId [""TH3""]; Op_TH3 = group this;";
+					init="[this,""RUS"",""PIL""] call tb3_fLoadout;";
 					description="TH3 Pilot";
 				};
 				class Item1
 				{
 					position[]={1701.1681,5,7257.9629};
-					id=67;
+					id=68;
 					side="EAST";
-					vehicle="O_Pilot_F";
-					player="PLAY CDG";
+					vehicle="TC_L8_Red";
 					rank="LIEUTENANT";
 					skill=0.60000002;
 					text="UnitCSAT_TH3_C";
-					init="[this,""RUS"",""PILR""] call tb3_fLoadout; this setGroupId [""TH3""]; Op_TH3 = group this;";
+					init="[this,""RUS"",""PILR""] call tb3_fLoadout;";
 					description="TH3 Crew Chief";
 				};
 				class Item2
 				{
 					position[]={1702.7765,5,7256.3667};
 					special="NONE";
-					id=68;
+					id=69;
 					side="EAST";
-					vehicle="O_Pilot_F";
-					player="PLAY CDG";
+					vehicle="TC_L8_Red";
 					skill=0.60000002;
 					text="UnitCSAT_TH3_AC";
-					init="[this,""RUS"",""AIRCR""] call tb3_fLoadout; this setGroupId [""TH3""]; Op_TH3 = group this;";
+					init="[this,""RUS"",""AIRCR""] call tb3_fLoadout;";
 					description="TH3 Air Crewman";
 				};
 			};
 		};
-		class Item29
+		class Item30
 		{
 			side="EAST";
 			class Vehicles
@@ -1344,33 +1294,31 @@ class Mission
 				{
 					position[]={1723.3492,5,7261.6938};
 					special="NONE";
-					id=69;
+					id=70;
 					side="EAST";
-					vehicle="O_Pilot_F";
-					player="PLAY CDG";
+					vehicle="TC_L8_Red";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
 					text="UnitCSAT_AH1_P";
-					init="[this,""RUS"",""PIL""] call tb3_fLoadout; this setGroupId [""AH1""]; Op_AH1 = group this;";
+					init="[this,""RUS"",""PIL""] call tb3_fLoadout;";
 					description="AH1 Pilot";
 				};
 				class Item1
 				{
 					position[]={1724.7355,5,7260.1426};
-					id=70;
+					id=71;
 					side="EAST";
-					vehicle="O_Pilot_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Red";
 					rank="LIEUTENANT";
 					skill=0.60000002;
 					text="UnitCSAT_AH1_G";
-					init="[this,""RUS"",""PILR""] call tb3_fLoadout; this setGroupId [""AH1""]; Op_AH1 = group this;";
-					description="AH1 Gunner";
+					init="[this,""RUS"",""PILR""] call tb3_fLoadout;";
+					description="aH1 Gunner";
 				};
 			};
 		};
-		class Item30
+		class Item31
 		{
 			side="WEST";
 			class Vehicles
@@ -1380,48 +1328,46 @@ class Mission
 				{
 					position[]={6982.6143,5,7472.3872};
 					azimut=358.57901;
-					id=71;
+					id=72;
 					side="WEST";
-					vehicle="B_Soldier_SL_F";
-					player="PLAYER COMMANDER";
+					vehicle="TC_L3_Blue";
+					player="PLAY CDG";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
 					text="UnitNATO_CO";
-					init="[this,""USA"",""PC""] call tb3_fLoadout; this setGroupId [""CO""]; CO = group this; ";
+					init="[this,""USA"",""PC""] call tb3_fLoadout;";
 					description="Platoon Commander";
 				};
 				class Item1
 				{
 					position[]={6980.9707,5,7470.8799};
 					azimut=358.23401;
-					id=72;
+					id=73;
 					side="WEST";
-					vehicle="B_medic_F";
-					player="PLAY CDG";
+					vehicle="TC_L3_Blue";
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitNATO_CO_M";
-					init="[this,""USA"",""MED""] call tb3_fLoadout;  this setGroupId [""CO""]; CO = group this; ";
+					init="[this,""USA"",""MED""] call tb3_fLoadout; ";
 					description="Platoon Medic";
 				};
 				class Item2
 				{
 					position[]={6984.3198,5,7471.1592};
 					azimut=719.17603;
-					id=73;
+					id=74;
 					side="WEST";
-					vehicle="B_Soldier_SL_F";
-					player="PLAY CDG";
+					vehicle="TC_L3_Blue";
 					rank="SERGEANT";
 					skill=0.60000002;
 					text="UnitNATO_PSG";
-					init="[this,""USA"",""RTO""] call tb3_fLoadout;  this setGroupId [""CO""]; CO = group this; ";
+					init="[this,""USA"",""RTO""] call tb3_fLoadout; ";
 					description="Platoon Sgt/FAC";
 				};
 			};
 		};
-		class Item31
+		class Item32
 		{
 			side="WEST";
 			class Vehicles
@@ -1431,91 +1377,28 @@ class Mission
 				{
 					position[]={6959.6704,5,7465.7881};
 					azimut=360.76001;
-					id=74;
+					id=75;
 					side="WEST";
-					vehicle="B_Soldier_SL_F";
+					vehicle="TC_L3_Blue";
 					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
 					text="UnitNATO_ASL";
-					init="[this,""USA"",""SL""] call tb3_fLoadout; this setGroupId [""ASL""]; ASL = group this;";
+					init="[this,""USA"",""SL""] call tb3_fLoadout; ";
 					description="Alpha SL";
 				};
 				class Item1
 				{
 					position[]={6961.5166,5,7463.5996};
 					azimut=360.76099;
-					id=75;
-					side="WEST";
-					vehicle="B_medic_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitNATO_ASL_M";
-					init="[this,""USA"",""MED""] call tb3_fLoadout; this setGroupId [""ASL""]; ASL = group this;";
-					description="Alpha Medic";
-				};
-			};
-		};
-		class Item32
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={6959.0596,5,7458.8442};
-					azimut=363.40701;
 					id=76;
 					side="WEST";
-					vehicle="B_Soldier_TL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
+					vehicle="TC_L4_Blue";
 					skill=0.60000002;
-					text="UnitNATO_A1_FTL";
-					init="[this,""USA"",""FTL""] call tb3_fLoadout; this setGroupID [""A1""]; A1 = group this;";
-					description="A1 FTL";
-				};
-				class Item1
-				{
-					position[]={6961.2183,5,7455.7446};
-					azimut=363.40701;
-					id=77;
-					side="WEST";
-					vehicle="B_soldier_AR_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitNATO_A1_AR";
-					init="[this,""USA"",""AR""] call tb3_fLoadout; this setGroupId [""A1""]; A1 = group this;";
-					description="A1 AR";
-				};
-				class Item2
-				{
-					position[]={6963.5737,5,7455.6533};
-					azimut=363.40701;
-					id=78;
-					side="WEST";
-					vehicle="B_OD_OD_soldier_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitNATO_A1_AAR";
-					init="[this,""USA"",""ARR""] call tb3_fLoadout; this setGroupId [""A1""]; A1 = group this;";
-					description="A1 AAR";
-				};
-				class Item3
-				{
-					position[]={6966.062,5,7455.5635};
-					azimut=363.40701;
-					id=79;
-					side="WEST";
-					vehicle="B_soldier_AT_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitNATO_A1_AT";
-					init="[this,""USA"",""RAT""] call tb3_fLoadout; this setGroupId [""A1""]; A1 = group this;";
-					description="A1 RAT";
+					text="UnitNATO_ASL_M";
+					init="[this,""USA"",""MED""] call tb3_fLoadout; ";
+					description="Alpha Medic";
 				};
 			};
 		};
@@ -1527,61 +1410,117 @@ class Mission
 				items=4;
 				class Item0
 				{
-					position[]={6959.4058,5,7451.0708};
-					azimut=364.58701;
+					position[]={6959.0596,5,7458.8442};
+					azimut=363.40701;
+					id=77;
+					side="WEST";
+					vehicle="TC_L3_Blue";
+					player="PLAY CDG";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.60000002;
+					text="UnitNATO_A1_FTL";
+					init="[this,""USA"",""FTL""] call tb3_fLoadout; ";
+					description="A1 FTL";
+				};
+				class Item1
+				{
+					position[]={6961.2183,5,7455.7446};
+					azimut=363.40701;
+					id=78;
+					side="WEST";
+					vehicle="TC_L4_Blue";
+					skill=0.60000002;
+					text="UnitNATO_A1_AR";
+					init="[this,""USA"",""AR""] call tb3_fLoadout; ";
+					description="A1 AR";
+				};
+				class Item2
+				{
+					position[]={6963.5737,5,7455.6533};
+					azimut=363.40701;
+					id=79;
+					side="WEST";
+					vehicle="TC_L4_Blue";
+					skill=0.60000002;
+					text="UnitNATO_A1_AAR";
+					init="[this,""USA"",""ARR""] call tb3_fLoadout; ";
+					description="A1 AAR";
+				};
+				class Item3
+				{
+					position[]={6966.062,5,7455.5635};
+					azimut=363.40701;
 					id=80;
 					side="WEST";
-					vehicle="B_Soldier_TL_F";
+					vehicle="TC_L4_Blue";
+					skill=0.60000002;
+					text="UnitNATO_A1_AT";
+					init="[this,""USA"",""RAT""] call tb3_fLoadout; ";
+					description="A1 RAT";
+				};
+			};
+		};
+		class Item34
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={6959.4058,5,7451.0708};
+					azimut=364.58701;
+					id=81;
+					side="WEST";
+					vehicle="TC_L3_Blue";
 					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitNATO_A2_FTL";
-					init="[this,""USA"",""FTL""] call tb3_fLoadout; this setGroupId [""A2""]; A2 = group this;";
+					init="[this,""USA"",""FTL""] call tb3_fLoadout; ";
 					description="A2 FTL";
 				};
 				class Item1
 				{
 					position[]={6961.6064,5,7448.5679};
 					azimut=364.58701;
-					id=81;
+					id=82;
 					side="WEST";
-					vehicle="B_soldier_AR_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Blue";
 					skill=0.60000002;
 					text="UnitNATO_A2_AR";
-					init="[this,""USA"",""AR""] call tb3_fLoadout; this setGroupId [""A2""]; A2 = group this;";
+					init="[this,""USA"",""AR""] call tb3_fLoadout; ";
 					description="A2 AR";
 				};
 				class Item2
 				{
 					position[]={6964.0146,5,7448.4658};
 					azimut=364.58701;
-					id=82;
+					id=83;
 					side="WEST";
-					vehicle="B_OD_OD_soldier_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Blue";
 					skill=0.60000002;
 					text="UnitNATO_A2_AAR";
-					init="[this,""USA"",""ARR""] call tb3_fLoadout; this setGroupId [""A2""]; A2 = group this;";
+					init="[this,""USA"",""ARR""] call tb3_fLoadout; ";
 					description="A2 AAR";
 				};
 				class Item3
 				{
 					position[]={6966.3315,5,7448.3335};
 					azimut=364.58701;
-					id=83;
+					id=84;
 					side="WEST";
-					vehicle="B_soldier_AT_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Blue";
 					skill=0.60000002;
 					text="UnitNATO_A2_AT";
-					init="[this,""USA"",""RAT""] call tb3_fLoadout; this setGroupId [""A2""]; A2 = group this;";
+					init="[this,""USA"",""RAT""] call tb3_fLoadout; ";
 					description="A2 RAT";
 				};
 			};
 		};
-		class Item34
+		class Item35
 		{
 			side="WEST";
 			class Vehicles
@@ -1591,91 +1530,28 @@ class Mission
 				{
 					position[]={6981.3872,5,7464.0879};
 					azimut=360.76001;
-					id=84;
+					id=85;
 					side="WEST";
-					vehicle="B_Soldier_SL_F";
+					vehicle="TC_L3_Blue";
 					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
 					text="UnitNATO_BSL";
-					init="[this,""USA"",""SL""] call tb3_fLoadout; this setGroupId [""BSL""]; BSL = group this;";
+					init="[this,""USA"",""SL""] call tb3_fLoadout; ";
 					description="Bravo SL";
 				};
 				class Item1
 				{
 					position[]={6983.1094,5,7461.9409};
 					azimut=360.76099;
-					id=85;
-					side="WEST";
-					vehicle="B_medic_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitNATO_BSL_M";
-					init="[this,""USA"",""MED""] call tb3_fLoadout;  this setGroupId [""BSL""]; BSL = group this;";
-					description="Bravo Medic";
-				};
-			};
-		};
-		class Item35
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={6979.3125,5,7458.6313};
-					azimut=363.40701;
 					id=86;
 					side="WEST";
-					vehicle="B_Soldier_TL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
+					vehicle="TC_L4_Blue";
 					skill=0.60000002;
-					text="UnitNATO_B1_FTL";
-					init="[this,""USA"",""FTL""] call tb3_fLoadout;  this setGroupId [""B1""]; B1 = group this;";
-					description="B1 FTL";
-				};
-				class Item1
-				{
-					position[]={6981.1431,5,7456.0073};
-					azimut=363.40701;
-					id=87;
-					side="WEST";
-					vehicle="B_soldier_AR_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitNATO_B1_AR";
-					init="[this,""USA"",""AR""] call tb3_fLoadout; this setGroupId [""B1""]; B1 = group this;";
-					description="B1 AR";
-				};
-				class Item2
-				{
-					position[]={6983.7866,5,7455.9565};
-					azimut=358.013;
-					id=88;
-					side="WEST";
-					vehicle="B_OD_OD_soldier_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitNATO_B1_AAR";
-					init="[this,""USA"",""ARR""] call tb3_fLoadout ;this setGroupId [""B1""]; B1 = group this; ";
-					description="B1 AAR";
-				};
-				class Item3
-				{
-					position[]={6986.2749,5,7455.8257};
-					azimut=363.40701;
-					id=89;
-					side="WEST";
-					vehicle="B_soldier_AT_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitNATO_B1_AT";
-					init="[this,""USA"",""RAT""] call tb3_fLoadout; this setGroupId [""B1""]; B1 = group this; ";
-					description="B1 RAT";
+					text="UnitNATO_BSL_M";
+					init="[this,""USA"",""MED""] call tb3_fLoadout; ";
+					description="Bravo Medic";
 				};
 			};
 		};
@@ -1687,61 +1563,117 @@ class Mission
 				items=4;
 				class Item0
 				{
-					position[]={6979.5698,5,7451.8301};
-					azimut=364.58701;
+					position[]={6979.3125,5,7458.6313};
+					azimut=363.40701;
+					id=87;
+					side="WEST";
+					vehicle="TC_L3_Blue";
+					player="PLAY CDG";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.60000002;
+					text="UnitNATO_B1_FTL";
+					init="[this,""USA"",""FTL""] call tb3_fLoadout; ";
+					description="B1 FTL";
+				};
+				class Item1
+				{
+					position[]={6981.1431,5,7456.0073};
+					azimut=363.40701;
+					id=88;
+					side="WEST";
+					vehicle="TC_L4_Blue";
+					skill=0.60000002;
+					text="UnitNATO_B1_AR";
+					init="[this,""USA"",""AR""] call tb3_fLoadout; ";
+					description="B1 AR";
+				};
+				class Item2
+				{
+					position[]={6983.7866,5,7455.9565};
+					azimut=363.40701;
+					id=89;
+					side="WEST";
+					vehicle="TC_L4_Blue";
+					skill=0.60000002;
+					text="UnitNATO_B1_AAR";
+					init="[this,""USA"",""ARR""] call tb3_fLoadout; ";
+					description="B1 AAR";
+				};
+				class Item3
+				{
+					position[]={6986.2749,5,7455.8257};
+					azimut=363.40701;
 					id=90;
 					side="WEST";
-					vehicle="B_Soldier_TL_F";
+					vehicle="TC_L4_Blue";
+					skill=0.60000002;
+					text="UnitNATO_B1_AT";
+					init="[this,""USA"",""RAT""] call tb3_fLoadout; ";
+					description="B1 RAT";
+				};
+			};
+		};
+		class Item37
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={6979.5698,5,7451.8301};
+					azimut=364.58701;
+					id=91;
+					side="WEST";
+					vehicle="TC_L3_Blue";
 					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitNATO_B2_FTL";
-					init="[this,""USA"",""FTL""] call tb3_fLoadout; this setGroupId [""B2""]; B2 = group this; ";
+					init="[this,""USA"",""FTL""] call tb3_fLoadout; ";
 					description="B2 FTL";
 				};
 				class Item1
 				{
 					position[]={6982.0181,5,7448.957};
 					azimut=364.58701;
-					id=91;
+					id=92;
 					side="WEST";
-					vehicle="B_soldier_AR_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Blue";
 					skill=0.60000002;
 					text="UnitNATO_B2_AR";
-					init="[this,""USA"",""AR""] call tb3_fLoadout; this setGroupId [""B2""]; B2 = group this;  ";
+					init="[this,""USA"",""AR""] call tb3_fLoadout; ";
 					description="B2 AR";
 				};
 				class Item2
 				{
 					position[]={6984.1802,5,7448.896};
 					azimut=364.58701;
-					id=92;
+					id=93;
 					side="WEST";
-					vehicle="B_OVERALL_sage_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Blue";
 					skill=0.60000002;
 					text="UnitNATO_B2_AAR";
-					init="[this,""USA"",""ARR""] call tb3_fLoadout; this setGroupId [""B2""]; B2 = group this; ";
+					init="[this,""USA"",""ARR""] call tb3_fLoadout; ";
 					description="B2 AAR";
 				};
 				class Item3
 				{
 					position[]={6986.6606,5,7448.8047};
 					azimut=364.58701;
-					id=93;
+					id=94;
 					side="WEST";
-					vehicle="B_soldier_AT_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Blue";
 					skill=0.60000002;
 					text="UnitNATO_B2_AT";
-					init="[this,""USA"",""RAT""] call tb3_fLoadout; this setGroupId [""B2""]; B2 = group this; ";
+					init="[this,""USA"",""RAT""] call tb3_fLoadout; ";
 					description="B2 RAT";
 				};
 			};
 		};
-		class Item37
+		class Item38
 		{
 			side="WEST";
 			class Vehicles
@@ -1751,91 +1683,28 @@ class Mission
 				{
 					position[]={6997.9194,5,7466.2529};
 					azimut=360.76001;
-					id=94;
+					id=95;
 					side="WEST";
-					vehicle="B_Soldier_SL_F";
+					vehicle="TC_L3_Blue";
 					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
 					text="UnitNATO_CSL";
-					init="[this,""USA"",""SL""] call tb3_fLoadout; this setGroupId [""CSL""]; CSL = group this;  ";
+					init="[this,""USA"",""SL""] call tb3_fLoadout; ";
 					description="Charlie SL";
 				};
 				class Item1
 				{
 					position[]={6999.9385,5,7463.8833};
 					azimut=360.76099;
-					id=95;
-					side="WEST";
-					vehicle="B_medic_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitNATO_CSL_M";
-					init="[this,""USA"",""MED""] call tb3_fLoadout; this setGroupId [""CSL""]; CSL = group this; ";
-					description="Charlie Medic";
-				};
-			};
-		};
-		class Item38
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={6997.9043,5,7458.8345};
-					azimut=363.40701;
 					id=96;
 					side="WEST";
-					vehicle="B_Soldier_TL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
+					vehicle="TC_L4_Blue";
 					skill=0.60000002;
-					text="UnitNATO_C1_FTL";
-					init="[this,""USA"",""FTL""] call tb3_fLoadout;  this setGroupId [""C1""]; C1 = group this; ";
-					description="C1 FTL";
-				};
-				class Item1
-				{
-					position[]={7000.2925,5,7456.291};
-					azimut=363.40701;
-					id=97;
-					side="WEST";
-					vehicle="B_soldier_AR_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitNATO_C1_AR";
-					init="[this,""USA"",""AR""] call tb3_fLoadout;   this setGroupId [""C1""]; C1 = group this; ";
-					description="C1 AR";
-				};
-				class Item2
-				{
-					position[]={7003.4141,5,7456.0605};
-					azimut=363.40701;
-					id=98;
-					side="WEST";
-					vehicle="B_OD_OD_soldier_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitNATO_C1_AAR";
-					init="[this,""USA"",""ARR""] call tb3_fLoadout;  this setGroupId [""C1""]; C1 = group this;  ";
-					description="C1 AAR";
-				};
-				class Item3
-				{
-					position[]={7006.0854,5,7456.2231};
-					azimut=363.40701;
-					id=99;
-					side="WEST";
-					vehicle="B_soldier_AT_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitNATO_C1_AT";
-					init="[this,""USA"",""RAT""] call tb3_fLoadout;   this setGroupId [""C1""]; C1 = group this; ";
-					description="C1 RAT";
+					text="UnitNATO_CSL_M";
+					init="[this,""USA"",""MED""] call tb3_fLoadout; ";
+					description="Charlie Medic";
 				};
 			};
 		};
@@ -1847,57 +1716,54 @@ class Mission
 				items=4;
 				class Item0
 				{
-					position[]={6998.4214,5,7451.7305};
-					azimut=364.58701;
-					id=100;
+					position[]={6997.9043,5,7458.8345};
+					azimut=363.40701;
+					id=97;
 					side="WEST";
-					vehicle="B_Soldier_TL_F";
+					vehicle="TC_L3_Blue";
 					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
-					text="UnitNATO_C2_FTL";
-					init="[this,""USA"",""FTL""] call tb3_fLoadout;   this setGroupId [""C2""]; C2 = group this; ";
-					description="C2 FTL";
+					text="UnitNATO_C1_FTL";
+					init="[this,""USA"",""FTL""] call tb3_fLoadout; ";
+					description="C1 FTL";
 				};
 				class Item1
 				{
-					position[]={7000.8154,5,7449.1021};
-					azimut=364.58701;
-					id=101;
+					position[]={7000.2925,5,7456.291};
+					azimut=363.40701;
+					id=98;
 					side="WEST";
-					vehicle="B_soldier_AR_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Blue";
 					skill=0.60000002;
-					text="UnitNATO_C2_AR";
-					init="[this,""USA"",""AR""] call tb3_fLoadout; this setGroupId [""C2""]; C2 = group this; ";
-					description="C2 AR";
+					text="UnitNATO_C1_AR";
+					init="[this,""USA"",""AR""] call tb3_fLoadout; ";
+					description="C1 AR";
 				};
 				class Item2
 				{
-					position[]={7003.7637,5,7448.7065};
-					azimut=364.58701;
-					id=102;
+					position[]={7003.4141,5,7456.0605};
+					azimut=363.40701;
+					id=99;
 					side="WEST";
-					vehicle="B_OD_OD_soldier_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Blue";
 					skill=0.60000002;
-					text="UnitNATO_C2_AAR";
-					init="[this,""USA"",""ARR""] call tb3_fLoadout;  this setGroupId [""C2""]; C2 = group this; ";
-					description="C2 AAR";
+					text="UnitNATO_C1_AAR";
+					init="[this,""USA"",""ARR""] call tb3_fLoadout; ";
+					description="C1 AAR";
 				};
 				class Item3
 				{
-					position[]={7006.562,5,7448.5117};
-					azimut=364.58701;
-					id=103;
+					position[]={7006.0854,5,7456.2231};
+					azimut=363.40701;
+					id=100;
 					side="WEST";
-					vehicle="B_soldier_AT_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Blue";
 					skill=0.60000002;
-					text="UnitNATO_C2_AT";
-					init="[this,""USA"",""RAT""] call tb3_fLoadout;  this setGroupId [""C2""]; C2 = group this; ";
-					description="C2 RAT";
+					text="UnitNATO_C1_AT";
+					init="[this,""USA"",""RAT""] call tb3_fLoadout; ";
+					description="C1 RAT";
 				};
 			};
 		};
@@ -1906,20 +1772,57 @@ class Mission
 			side="WEST";
 			class Vehicles
 			{
-				items=1;
+				items=4;
 				class Item0
 				{
-					position[]={7023.7915,5,7467.9404};
-					azimut=362.01501;
-					id=104;
+					position[]={6998.4214,5,7451.7305};
+					azimut=364.58701;
+					id=101;
 					side="WEST";
-					vehicle="B_soldier_exp_F";
+					vehicle="TC_L3_Blue";
 					player="PLAY CDG";
 					leader=1;
+					rank="CORPORAL";
 					skill=0.60000002;
-					text="UnitNATO_ENG1_DEMO";
-					init="[this,""USA"",""ENGDEMO""] call tb3_fLoadout; this setGroupId [""ENG_DEMO""]; ENG_DEMO = group this;";
-					description="Engineer (Demo)";
+					text="UnitNATO_C2_FTL";
+					init="[this,""USA"",""FTL""] call tb3_fLoadout; ";
+					description="C2 FTL";
+				};
+				class Item1
+				{
+					position[]={7000.8154,5,7449.1021};
+					azimut=364.58701;
+					id=102;
+					side="WEST";
+					vehicle="TC_L4_Blue";
+					skill=0.60000002;
+					text="UnitNATO_C2_AR";
+					init="[this,""USA"",""AR""] call tb3_fLoadout; ";
+					description="C2 AR";
+				};
+				class Item2
+				{
+					position[]={7003.7637,5,7448.8901};
+					azimut=364.58701;
+					id=103;
+					side="WEST";
+					vehicle="TC_L4_Blue";
+					skill=0.60000002;
+					text="UnitNATO_C2_AAR";
+					init="[this,""USA"",""ARR""] call tb3_fLoadout; ";
+					description="C2 AAR";
+				};
+				class Item3
+				{
+					position[]={7006.562,5,7448.5117};
+					azimut=364.58701;
+					id=104;
+					side="WEST";
+					vehicle="TC_L4_Blue";
+					skill=0.60000002;
+					text="UnitNATO_C2_AT";
+					init="[this,""USA"",""RAT""] call tb3_fLoadout; ";
+					description="C2 RAT";
 				};
 			};
 		};
@@ -1931,18 +1834,17 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7021.5308,5,7467.9233};
+					position[]={7023.7915,5,7467.9404};
 					azimut=362.01501;
 					id=105;
 					side="WEST";
-					vehicle="B_engineer_F";
+					vehicle="TC_L4_Blue";
 					player="PLAY CDG";
 					leader=1;
-					rank="CORPORAL";
 					skill=0.60000002;
-					text="UnitNATO_ENG1";
-					init="[this,""USA"",""ENG""] call tb3_fLoadout; this setGroupId [""ENG1""]; ENG1 = group this;";
-					description="Engineer";
+					text="UnitNATO_ENG1_DEMO";
+					init="[this,""USA"",""ENGDEMO""] call tb3_fLoadout;";
+					description="Engineer (Demo)";
 				};
 			};
 		};
@@ -1954,17 +1856,18 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7025.9248,5,7467.9414};
+					position[]={7021.5308,5,7467.9233};
 					azimut=362.01501;
 					id=106;
 					side="WEST";
-					vehicle="B_soldier_exp_F";
+					vehicle="TC_L4_Blue";
 					player="PLAY CDG";
 					leader=1;
+					rank="CORPORAL";
 					skill=0.60000002;
-					text="UnitNATO_ENG1_MINE";
-					init="[this,""USA"",""ENGMINE""] call tb3_fLoadout; this setGroupId [""ENG_MINE""]; ENG_MINE = group this;";
-					description="Engineer (Mines)";
+					text="UnitNATO_ENG1";
+					init="[this,""USA"",""ENG""] call tb3_fLoadout;";
+					description="Engineer";
 				};
 			};
 		};
@@ -1973,33 +1876,20 @@ class Mission
 			side="WEST";
 			class Vehicles
 			{
-				items=2;
+				items=1;
 				class Item0
 				{
-					position[]={7021.4282,5,7463.4355};
-					azimut=358.69601;
+					position[]={7025.9248,5,7467.9414};
+					azimut=362.01501;
 					id=107;
 					side="WEST";
-					vehicle="B_soldier_AR_F";
+					vehicle="TC_L4_Blue";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
-					text="UnitNATO_MMG1_G";
-					init="[this,""USA"",""MMG""] call tb3_fLoadout; this setGroupId [""MMG1""]; MMG1 = group this;  ";
-					description="MMG1 Gunner";
-				};
-				class Item1
-				{
-					position[]={7024.4849,5,7461.0439};
-					azimut=358.69601;
-					id=108;
-					side="WEST";
-					vehicle="B_BLK_TAN_R_soldier_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitNATO_MMG1_A";
-					init="[this,""USA"",""MMGA""] call tb3_fLoadout; this setGroupId [""MMG1""]; MMG1 = group this;   ";
-					description="MMG1 Assist.";
+					text="UnitNATO_ENG1_MINE";
+					init="[this,""USA"",""ENGMINE""] call tb3_fLoadout;";
+					description="Engineer (Mines)";
 				};
 			};
 		};
@@ -2011,31 +1901,29 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={7030.3682,5,7463.5986};
-					azimut=363.73001;
-					id=109;
+					position[]={7021.4282,5,7463.4355};
+					azimut=358.69601;
+					id=108;
 					side="WEST";
-					vehicle="B_soldier_AT_F";
+					vehicle="TC_L4_Blue";
 					player="PLAY CDG";
 					leader=1;
-					rank="CORPORAL";
 					skill=0.60000002;
-					text="UnitNATO_MAT1_G";
-					init="[this,""USA"",""MAT""] call tb3_fLoadout; this setGroupId [""MAT1""]; MAT1 = group this;  ";
-					description="MAT1 Gunner";
+					text="UnitNATO_MMG1_G";
+					init="[this,""USA"",""MMG""] call tb3_fLoadout; ";
+					description="MMG1 Gunner";
 				};
 				class Item1
 				{
-					position[]={7034.7046,5,7460.8682};
-					azimut=363.73001;
-					id=110;
+					position[]={7024.4849,5,7461.0439};
+					azimut=358.69601;
+					id=109;
 					side="WEST";
-					vehicle="B_BLK_TAN_R_soldier_F";
-					player="PLAY CDG";
+					vehicle="TC_L3_Blue";
 					skill=0.60000002;
-					text="UnitNATO_MAT1_A";
-					init="[this,""USA"",""MATA""] call tb3_fLoadout; this setGroupId [""MAT1""]; MAT1 = group this;";
-					description="MAT1 Assist.";
+					text="UnitNATO_MMG1_A";
+					init="[this,""USA"",""MMGA""] call tb3_fLoadout; ";
+					description="MMG1 Assist.";
 				};
 			};
 		};
@@ -2047,35 +1935,69 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={7025.1133,5,7454.2778};
-					azimut=359.86801;
-					id=111;
+					position[]={7030.3682,5,7463.5986};
+					azimut=363.73001;
+					id=110;
 					side="WEST";
-					vehicle="B_blk_T_F";
+					vehicle="TC_L4_Blue";
 					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
+					text="UnitNATO_MAT1_G";
+					init="[this,""USA"",""MAT""] call tb3_fLoadout;";
+					description="MAT1 Gunner";
+				};
+				class Item1
+				{
+					position[]={7034.7046,5,7460.8682};
+					azimut=363.73001;
+					id=111;
+					side="WEST";
+					vehicle="TC_L4_Blue";
+					skill=0.60000002;
+					text="UnitNATO_MAT1_A";
+					init="[this,""USA"",""MATA""] call tb3_fLoadout;";
+					description="MAT1 Assist.";
+				};
+			};
+		};
+		class Item46
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={7025.1133,5,7454.2778};
+					azimut=359.86801;
+					id=112;
+					side="WEST";
+					vehicle="TC_L10_Blue";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.60000002;
 					text="UnitNATO_SP";
-					init="[this,""USA"",""SP""] call tb3_fLoadout; this setGroupId [""RECON""]; RECON = group this;";
-					description="Scout";
+					init="[this,""USA"",""SP""] call tb3_fLoadout;";
+					description="Spotter";
 				};
 				class Item1
 				{
 					position[]={7021.6245,5,7456.3354};
 					azimut=359.86801;
-					id=112;
+					id=113;
 					side="WEST";
-					vehicle="B_soldier_M_F";
+					vehicle="TC_L10_Blue";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitNATO_SN";
-					init="[this,""USA"",""SN""] call tb3_fLoadout; this setGroupId [""RECON""]; RECON = group this;";
-					description="Scout Lead";
+					init="[this,""USA"",""SN""] call tb3_fLoadout;";
+					description="Sniper";
 				};
 			};
 		};
-		class Item46
+		class Item47
 		{
 			side="WEST";
 			class Vehicles
@@ -2085,64 +2007,15 @@ class Mission
 				{
 					position[]={7021.6997,5,7448.0708};
 					azimut=362.896;
-					id=113;
+					id=114;
 					side="WEST";
-					vehicle="B_soldier_M_F";
+					vehicle="TC_L10_Blue";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="UnitNATO_MARK";
-					init="[this,""USA"",""MARK""] call tb3_fLoadout; this setGroupId [""MARK""]; MARK = group this; ";
+					init="[this,""USA"",""MARK""] call tb3_fLoadout; ";
 					description="Marksman";
-				};
-			};
-		};
-		class Item47
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={6959.6641,5,7428.8818};
-					azimut=361.478;
-					id=114;
-					side="WEST";
-					vehicle="B_crew_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitNATO_IFV1_VC";
-					init="[this,""USA"",""VC""] call tb3_fLoadout; this setGroupId [""IFV1""]; IFV1 = group this;";
-					description="IFV1 Commander";
-				};
-				class Item1
-				{
-					position[]={6963.7251,5,7425.1855};
-					azimut=361.478;
-					id=115;
-					side="WEST";
-					vehicle="B_crew_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitNATO_IFV1_VD";
-					init="[this,""USA"",""VD""] call tb3_fLoadout; this setGroupId [""IFV1""]; IFV1 = group this;";
-					description="IFV1 Driver";
-				};
-				class Item2
-				{
-					position[]={6961.8208,5,7426.9575};
-					azimut=361.478;
-					id=116;
-					side="WEST";
-					vehicle="B_crew_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitNATO_IFV1_VG";
-					init="[this,""USA"",""VG""] call tb3_fLoadout; this setGroupId [""IFV1""]; IFV1 = group this;";
-					description="IFV1 Gunner";
 				};
 			};
 		};
@@ -2154,46 +2027,42 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={6959.3608,5,7399.1992};
-					azimut=358.246;
-					id=117;
+					position[]={6959.6641,5,7428.8818};
+					azimut=361.478;
+					id=115;
 					side="WEST";
-					vehicle="B_Pilot_F";
+					vehicle="TC_L4_Blue";
 					player="PLAY CDG";
 					leader=1;
-					rank="LIEUTENANT";
+					rank="CORPORAL";
 					skill=0.60000002;
-					text="UnitNATO_TH1_P";
-					init="[this,""USA"",""PIL""] call tb3_fLoadout; this setGroupId [""TH1""]; TH1 = group this;";
-					description="TH1 Pilot";
+					text="UnitNATO_IFV1_VC";
+					init="[this,""USA"",""VC""] call tb3_fLoadout;";
+					description="IFV1 Commander";
 				};
 				class Item1
 				{
-					position[]={6961.8765,5,7396.2671};
-					azimut=354.40799;
-					id=118;
+					position[]={6963.7251,5,7425.1855};
+					azimut=361.478;
+					id=116;
 					side="WEST";
-					vehicle="B_Pilot_F";
-					player="PLAY CDG";
-					rank="LIEUTENANT";
+					vehicle="TC_L4_Blue";
 					skill=0.60000002;
-					text="UnitNATO_TH1_C";
-					init="[this,""USA"",""PILR""] call tb3_fLoadout; this setGroupId [""TH1""]; TH1 = group this;";
-					description="TH1 Crew Chief";
+					text="UnitNATO_IFV1_VD";
+					init="[this,""USA"",""VD""] call tb3_fLoadout;";
+					description="IFV1 Driver";
 				};
 				class Item2
 				{
-					position[]={6963.9722,5,7393.8091};
-					azimut=354.40799;
-					id=119;
+					position[]={6961.8208,5,7426.9575};
+					azimut=361.478;
+					id=117;
 					side="WEST";
-					vehicle="B_Pilot_F";
-					player="PLAY CDG";
-					rank="CORPORAL";
+					vehicle="TC_L4_Blue";
 					skill=0.60000002;
-					text="UnitNATO_TH1_AC";
-					init="[this,""USA"",""AIRCR""] call tb3_fLoadout; this setGroupId [""TH1""]; TH1 = group this;";
-					description="TH1 Air Crewman";
+					text="UnitNATO_IFV1_VG";
+					init="[this,""USA"",""VG""] call tb3_fLoadout;";
+					description="IFV1 Gunner";
 				};
 			};
 		};
@@ -2205,44 +2074,44 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={6980.3159,5,7429.2515};
-					azimut=361.478;
-					id=120;
+					position[]={6959.3608,5,7399.1992};
+					azimut=358.246;
+					id=118;
 					side="WEST";
-					vehicle="B_crew_F";
+					vehicle="TC_L8_Blue";
 					player="PLAY CDG";
 					leader=1;
-					rank="CORPORAL";
+					rank="LIEUTENANT";
 					skill=0.60000002;
-					text="UnitNATO_IFV2_VC";
-					init="[this,""USA"",""VC""] call tb3_fLoadout; this setGroupId [""IFV2""]; IFV2 = group this;";
-					description="IFV2 Commander";
+					text="UnitNATO_TH1_P";
+					init="[this,""USA"",""PIL""] call tb3_fLoadout;";
+					description="TH1 Pilot";
 				};
 				class Item1
 				{
-					position[]={6984.064,5,7425.5518};
-					azimut=361.478;
-					id=121;
+					position[]={6961.8765,5,7396.2671};
+					azimut=354.40799;
+					id=119;
 					side="WEST";
-					vehicle="B_crew_F";
-					player="PLAY CDG";
+					vehicle="TC_L8_Blue";
+					rank="LIEUTENANT";
 					skill=0.60000002;
-					text="UnitNATO_IFV2_VD";
-					init="[this,""USA"",""VD""] call tb3_fLoadout; this setGroupId [""IFV2""]; IFV2 = group this;";
-					description="IFV2 Driver";
+					text="UnitNATO_TH1_C";
+					init="[this,""USA"",""PILR""] call tb3_fLoadout;";
+					description="TH1 Crew Chief";
 				};
 				class Item2
 				{
-					position[]={6982.3018,5,7427.4453};
-					azimut=361.478;
-					id=122;
+					position[]={6963.9722,5,7393.8091};
+					azimut=354.40799;
+					id=120;
 					side="WEST";
-					vehicle="B_crew_F";
-					player="PLAY CDG";
+					vehicle="TC_L8_Blue";
+					rank="CORPORAL";
 					skill=0.60000002;
-					text="UnitNATO_IFV2_VG";
-					init="[this,""USA"",""VG""] call tb3_fLoadout; this setGroupId [""IFV2""]; IFV2 = group this;";
-					description="IFV2 Gunner";
+					text="UnitNATO_TH1_AC";
+					init="[this,""USA"",""AIRCR""] call tb3_fLoadout;";
+					description="TH1 Air Crewman";
 				};
 			};
 		};
@@ -2254,44 +2123,42 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={6999.584,5,7429.5215};
+					position[]={6980.3159,5,7429.2515};
 					azimut=361.478;
-					id=123;
+					id=121;
 					side="WEST";
-					vehicle="B_crew_F";
+					vehicle="TC_L4_Blue";
 					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
-					text="UnitNATO_IFV3_VC";
-					init="[this,""USA"",""VC""] call tb3_fLoadout; this setGroupId [""IFV3""]; IFV3 = group this;";
-					description="IFV3 Commander";
+					text="UnitNATO_IFV2_VC";
+					init="[this,""USA"",""VC""] call tb3_fLoadout;";
+					description="IFV2 Commander";
 				};
 				class Item1
 				{
-					position[]={7004.3706,5,7425.0195};
+					position[]={6984.064,5,7425.5518};
 					azimut=361.478;
-					id=124;
+					id=122;
 					side="WEST";
-					vehicle="B_crew_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Blue";
 					skill=0.60000002;
-					text="UnitNATO_IFV3_VD";
-					init="[this,""USA"",""VD""] call tb3_fLoadout; this setGroupId [""IFV3""]; IFV3 = group this;";
-					description="IFV3 Driver";
+					text="UnitNATO_IFV2_VD";
+					init="[this,""USA"",""VD""] call tb3_fLoadout;";
+					description="IFV2 Driver";
 				};
 				class Item2
 				{
-					position[]={7001.895,5,7427.1724};
+					position[]={6982.3018,5,7427.4453};
 					azimut=361.478;
-					id=125;
+					id=123;
 					side="WEST";
-					vehicle="B_crew_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Blue";
 					skill=0.60000002;
-					text="UnitNATO_IFV3_VG";
-					init="[this,""USA"",""VG""] call tb3_fLoadout; this setGroupId [""IFV3""]; IFV3 = group this;";
-					description="IFV3 Gunner";
+					text="UnitNATO_IFV2_VG";
+					init="[this,""USA"",""VG""] call tb3_fLoadout;";
+					description="IFV2 Gunner";
 				};
 			};
 		};
@@ -2303,46 +2170,42 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={6979.6196,5,7399.2754};
-					azimut=358.246;
-					id=126;
+					position[]={6999.584,5,7429.5215};
+					azimut=361.478;
+					id=124;
 					side="WEST";
-					vehicle="B_Pilot_F";
+					vehicle="TC_L4_Blue";
 					player="PLAY CDG";
 					leader=1;
-					rank="LIEUTENANT";
+					rank="CORPORAL";
 					skill=0.60000002;
-					text="UnitNATO_TH2_P";
-					init="[this,""USA"",""PIL""] call tb3_fLoadout; this setGroupId [""TH2""]; TH2 = group this;";
-					description="TH2 Pilot";
+					text="UnitNATO_IFV3_VC";
+					init="[this,""USA"",""VC""] call tb3_fLoadout;";
+					description="IFV3 Commander";
 				};
 				class Item1
 				{
-					position[]={6982.4487,5,7396.2637};
-					azimut=354.40799;
-					id=127;
+					position[]={7004.3706,5,7425.0195};
+					azimut=361.478;
+					id=125;
 					side="WEST";
-					vehicle="B_Pilot_F";
-					player="PLAY CDG";
-					rank="LIEUTENANT";
+					vehicle="TC_L4_Blue";
 					skill=0.60000002;
-					text="UnitNATO_TH2_C";
-					init="[this,""USA"",""PILR""] call tb3_fLoadout; this setGroupId [""TH2""]; TH2 = group this;";
-					description="TH2 Crew Chief";
+					text="UnitNATO_IFV3_VD";
+					init="[this,""USA"",""VD""] call tb3_fLoadout;";
+					description="IFV3 Driver";
 				};
 				class Item2
 				{
-					position[]={6985.0938,5,7393.7905};
-					azimut=354.40799;
-					id=128;
+					position[]={7001.895,5,7427.1724};
+					azimut=361.478;
+					id=126;
 					side="WEST";
-					vehicle="B_Pilot_F";
-					player="PLAY CDG";
-					rank="CORPORAL";
+					vehicle="TC_L4_Blue";
 					skill=0.60000002;
-					text="UnitNATO_TH2_AC";
-					init="[this,""USA"",""AIRCR""] call tb3_fLoadout; this setGroupId [""TH2""]; TH2 = group this;";
-					description="TH2 Air Crewman";
+					text="UnitNATO_IFV3_VG";
+					init="[this,""USA"",""VG""] call tb3_fLoadout;";
+					description="IFV3 Gunner";
 				};
 			};
 		};
@@ -2354,46 +2217,44 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={6999.9761,5,7399.4204};
+					position[]={6979.6196,5,7399.2754};
 					azimut=358.246;
-					id=129;
+					id=127;
 					side="WEST";
-					vehicle="B_Pilot_F";
+					vehicle="TC_L8_Blue";
 					player="PLAY CDG";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
-					text="UnitNATO_TH3_P";
-					init="[this,""USA"",""PIL""] call tb3_fLoadout; this setGroupId [""TH3""]; TH3 = group this;";
-					description="TH1 Pilot";
+					text="UnitNATO_TH2_P";
+					init="[this,""USA"",""PIL""] call tb3_fLoadout;";
+					description="TH2 Pilot";
 				};
 				class Item1
 				{
-					position[]={7002.7954,5,7396.5322};
+					position[]={6982.4487,5,7396.2637};
 					azimut=354.40799;
-					id=130;
+					id=128;
 					side="WEST";
-					vehicle="B_Pilot_F";
-					player="PLAY CDG";
+					vehicle="TC_L8_Blue";
 					rank="LIEUTENANT";
 					skill=0.60000002;
-					text="UnitNATO_TH3_C";
-					init="[this,""USA"",""PILR""] call tb3_fLoadout; this setGroupId [""TH3""]; TH3 = group this;";
-					description="TH3 Crew Chief";
+					text="UnitNATO_TH2_C";
+					init="[this,""USA"",""PILR""] call tb3_fLoadout;";
+					description="TH2 Crew Chief";
 				};
 				class Item2
 				{
-					position[]={7005.5605,5,7393.1831};
+					position[]={6985.0938,5,7393.7905};
 					azimut=354.40799;
-					id=131;
+					id=129;
 					side="WEST";
-					vehicle="B_Pilot_F";
-					player="PLAY CDG";
+					vehicle="TC_L8_Blue";
 					rank="CORPORAL";
 					skill=0.60000002;
-					text="UnitNATO_TH3_AC";
-					init="[this,""USA"",""AIRCR""] call tb3_fLoadout; this setGroupId [""TH3""]; TH3 = group this;";
-					description="TH3 Air Crewman";
+					text="UnitNATO_TH2_AC";
+					init="[this,""USA"",""AIRCR""] call tb3_fLoadout;";
+					description="TH2 Air Crewman";
 				};
 			};
 		};
@@ -2405,48 +2266,95 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={7022.8042,5,7429.1826};
-					azimut=361.478;
+					position[]={6999.9761,5,7399.4204};
+					azimut=358.246;
+					id=130;
+					side="WEST";
+					vehicle="TC_L8_Blue";
+					player="PLAY CDG";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					text="UnitNATO_TH3_P";
+					init="[this,""USA"",""PIL""] call tb3_fLoadout;";
+					description="TH1 Pilot";
+				};
+				class Item1
+				{
+					position[]={7002.7954,5,7396.5322};
+					azimut=354.40799;
+					id=131;
+					side="WEST";
+					vehicle="TC_L8_Blue";
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					text="UnitNATO_TH3_C";
+					init="[this,""USA"",""PILR""] call tb3_fLoadout;";
+					description="TH3 Crew Chief";
+				};
+				class Item2
+				{
+					position[]={7005.5605,5,7393.1831};
+					azimut=354.40799;
 					id=132;
 					side="WEST";
-					vehicle="B_crew_F";
+					vehicle="TC_L8_Blue";
+					rank="CORPORAL";
+					skill=0.60000002;
+					text="UnitNATO_TH3_AC";
+					init="[this,""USA"",""AIRCR""] call tb3_fLoadout;";
+					description="TH3 Air Crewman";
+				};
+			};
+		};
+		class Item54
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={7022.8042,5,7429.1826};
+					azimut=361.478;
+					id=133;
+					side="WEST";
+					vehicle="TC_L4_Blue";
 					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitNATO_TNK1_VC";
-					init="[this,""USA"",""VC""] call tb3_fLoadout; this setGroupId [""TNK1""]; TNK1 = group this;";
+					init="[this,""USA"",""VC""] call tb3_fLoadout;";
 					description="TANK1 Commander";
 				};
 				class Item1
 				{
 					position[]={7028.1621,5,7423.9189};
 					azimut=361.478;
-					id=133;
+					id=134;
 					side="WEST";
-					vehicle="B_crew_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Blue";
 					skill=0.60000002;
 					text="UnitNATO_TNK1_VD";
-					init="[this,""USA"",""VD""] call tb3_fLoadout; this setGroupId [""TNK1""]; TNK1 = group this;";
+					init="[this,""USA"",""VD""] call tb3_fLoadout;";
 					description="TANK1 Driver";
 				};
 				class Item2
 				{
 					position[]={7025.4004,5,7426.9287};
 					azimut=361.478;
-					id=134;
+					id=135;
 					side="WEST";
-					vehicle="B_crew_F";
-					player="PLAY CDG";
+					vehicle="TC_L4_Blue";
 					skill=0.60000002;
 					text="UnitNATO_TNK1_VG";
-					init="[this,""USA"",""VG""] call tb3_fLoadout; this setGroupId [""TNK1""]; TNK1 = group this;";
+					init="[this,""USA"",""VG""] call tb3_fLoadout;";
 					description="TANK1 Gunner";
 				};
 			};
 		};
-		class Item54
+		class Item55
 		{
 			side="WEST";
 			class Vehicles
@@ -2456,34 +2364,33 @@ class Mission
 				{
 					position[]={7023.876,5,7397.8965};
 					azimut=358.246;
-					id=135;
+					id=136;
 					side="WEST";
-					vehicle="B_Pilot_F";
+					vehicle="TC_L8_Blue";
 					player="PLAY CDG";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
 					text="UnitNATO_AH1_P";
-					init="[this,""USA"",""PIL""] call tb3_fLoadout; this setGroupId [""AH1""]; AH1 = group this;";
+					init="[this,""USA"",""PIL""] call tb3_fLoadout;";
 					description="AH1 Pilot";
 				};
 				class Item1
 				{
 					position[]={7026.6953,5,7395.0083};
 					azimut=354.40799;
-					id=136;
+					id=137;
 					side="WEST";
-					vehicle="B_Pilot_F";
-					player="PLAY CDG";
+					vehicle="TC_L8_Blue";
 					rank="LIEUTENANT";
 					skill=0.60000002;
 					text="UnitNATO_AH1_G";
-					init="[this,""USA"",""PILR""] call tb3_fLoadout; this setGroupId [""AH1""]; AH1 = group this;";
+					init="[this,""USA"",""PILR""] call tb3_fLoadout;";
 					description="AH1 Gunner";
 				};
 			};
 		};
-		class Item55
+		class Item56
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2491,8 +2398,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7896.6592,5,7506.3569};
-					id=137;
+					position[]={7716.5469,5,7458.4424};
+					id=138;
 					side="LOGIC";
 					vehicle="tpwcas_module_dedicated";
 					leader=1;
@@ -2507,8 +2414,8 @@ class Mission
 		items=31;
 		class Item0
 		{
-			position[]={7856.8882,5,7592.4575};
-			id=138;
+			position[]={7676.7759,5,7544.543};
+			id=139;
 			side="EMPTY";
 			vehicle="Land_CncBarrierMedium4_F";
 			leader=1;
@@ -2516,8 +2423,8 @@ class Mission
 		};
 		class Item1
 		{
-			position[]={7864.2632,5,7592.4575};
-			id=139;
+			position[]={7684.1509,5,7544.543};
+			id=140;
 			side="EMPTY";
 			vehicle="Land_CncBarrierMedium4_F";
 			leader=1;
@@ -2525,8 +2432,8 @@ class Mission
 		};
 		class Item2
 		{
-			position[]={7871.6421,5,7592.4634};
-			id=140;
+			position[]={7691.5298,5,7544.5488};
+			id=141;
 			side="EMPTY";
 			vehicle="Land_CncBarrierMedium4_F";
 			leader=1;
@@ -2534,17 +2441,7 @@ class Mission
 		};
 		class Item3
 		{
-			position[]={7874.8335,5,7588.145};
-			azimut=90;
-			id=141;
-			side="EMPTY";
-			vehicle="Land_CncBarrierMedium4_F";
-			leader=1;
-			skill=0.60000002;
-		};
-		class Item4
-		{
-			position[]={7874.8335,5,7580.7681};
+			position[]={7694.7212,5,7540.2305};
 			azimut=90;
 			id=142;
 			side="EMPTY";
@@ -2552,9 +2449,9 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 		};
-		class Item5
+		class Item4
 		{
-			position[]={7853.7456,5,7573.1782};
+			position[]={7694.7212,5,7532.8535};
 			azimut=90;
 			id=143;
 			side="EMPTY";
@@ -2562,9 +2459,9 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 		};
-		class Item6
+		class Item5
 		{
-			position[]={7853.7495,5,7588.1431};
+			position[]={7673.6333,5,7525.2637};
 			azimut=90;
 			id=144;
 			side="EMPTY";
@@ -2572,9 +2469,9 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 		};
-		class Item7
+		class Item6
 		{
-			position[]={7853.7456,5,7580.6587};
+			position[]={7673.6372,5,7540.2285};
 			azimut=90;
 			id=145;
 			side="EMPTY";
@@ -2582,9 +2479,9 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 		};
-		class Item8
+		class Item7
 		{
-			position[]={7874.9351,5,7573.2856};
+			position[]={7673.6333,5,7532.7441};
 			azimut=90;
 			id=146;
 			side="EMPTY";
@@ -2592,10 +2489,20 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 		};
+		class Item8
+		{
+			position[]={7694.8228,5,7525.3711};
+			azimut=90;
+			id=147;
+			side="EMPTY";
+			vehicle="Land_CncBarrierMedium4_F";
+			leader=1;
+			skill=0.60000002;
+		};
 		class Item9
 		{
-			position[]={7856.8882,5,7568.9722};
-			id=147;
+			position[]={7676.7759,5,7521.0576};
+			id=148;
 			side="EMPTY";
 			vehicle="Land_CncBarrierMedium4_F";
 			leader=1;
@@ -2603,8 +2510,8 @@ class Mission
 		};
 		class Item10
 		{
-			position[]={7864.2632,5,7568.9722};
-			id=148;
+			position[]={7684.1509,5,7521.0576};
+			id=149;
 			side="EMPTY";
 			vehicle="Land_CncBarrierMedium4_F";
 			leader=1;
@@ -2612,8 +2519,8 @@ class Mission
 		};
 		class Item11
 		{
-			position[]={7871.6421,5,7568.978};
-			id=149;
+			position[]={7691.5298,5,7521.0635};
+			id=150;
 			side="EMPTY";
 			vehicle="Land_CncBarrierMedium4_F";
 			leader=1;
@@ -2622,7 +2529,7 @@ class Mission
 		class Item12
 		{
 			position[]={1654.7137,5,7359.4424};
-			id=150;
+			id=151;
 			side="EMPTY";
 			vehicle="RHS_Ural_MSV_01";
 			skill=0.60000002;
@@ -2631,7 +2538,7 @@ class Mission
 		class Item13
 		{
 			position[]={1644.2469,5,7359.9287};
-			id=151;
+			id=152;
 			side="EMPTY";
 			vehicle="rhs_tigr_msv";
 			skill=0.60000002;
@@ -2640,7 +2547,7 @@ class Mission
 		class Item14
 		{
 			position[]={1647.2216,5,7307.4805};
-			id=152;
+			id=153;
 			side="EMPTY";
 			vehicle="rhs_bmp2k_msv";
 			skill=0.60000002;
@@ -2651,7 +2558,7 @@ class Mission
 		class Item15
 		{
 			position[]={1673.8456,5,7307.9102};
-			id=153;
+			id=154;
 			side="EMPTY";
 			vehicle="rhs_bmp2k_msv";
 			skill=0.60000002;
@@ -2662,7 +2569,7 @@ class Mission
 		class Item16
 		{
 			position[]={1700.0402,5,7308.1245};
-			id=154;
+			id=155;
 			side="EMPTY";
 			vehicle="rhs_bmp2k_msv";
 			skill=0.60000002;
@@ -2673,7 +2580,7 @@ class Mission
 		class Item17
 		{
 			position[]={6959.2964,5,7481.1631};
-			id=155;
+			id=156;
 			side="EMPTY";
 			vehicle="rhsusf_m1025_d";
 			skill=0.60000002;
@@ -2683,7 +2590,7 @@ class Mission
 		{
 			position[]={1725.5079,5,7310.2886};
 			azimut=358.246;
-			id=156;
+			id=157;
 			side="EMPTY";
 			vehicle="rhs_t80u";
 			leader=1;
@@ -2696,7 +2603,7 @@ class Mission
 		{
 			position[]={1647.8817,5,7276.0703};
 			azimut=360.974;
-			id=157;
+			id=158;
 			side="EMPTY";
 			vehicle="RHS_Mi8mt_vdv";
 			skill=0.60000002;
@@ -2707,7 +2614,7 @@ class Mission
 		{
 			position[]={1674.7987,5,7275.3857};
 			azimut=360.974;
-			id=158;
+			id=159;
 			side="EMPTY";
 			vehicle="RHS_Mi8mt_vdv";
 			skill=0.60000002;
@@ -2718,7 +2625,7 @@ class Mission
 		{
 			position[]={1700.9391,5,7275.7192};
 			azimut=360.974;
-			id=159;
+			id=160;
 			side="EMPTY";
 			vehicle="RHS_Mi8mt_vdv";
 			skill=0.60000002;
@@ -2729,7 +2636,7 @@ class Mission
 		{
 			position[]={1725.0128,5,7275.063};
 			azimut=360.974;
-			id=160;
+			id=161;
 			side="EMPTY";
 			vehicle="RHS_Mi24V_vdv";
 			skill=0.60000002;
@@ -2740,7 +2647,7 @@ class Mission
 		{
 			position[]={6962.519,5,7437.4985};
 			azimut=718.66101;
-			id=161;
+			id=162;
 			side="EMPTY";
 			vehicle="RHS_M2A2_BUSKI";
 			skill=0.60000002;
@@ -2752,7 +2659,7 @@ class Mission
 		{
 			position[]={6962.125,5,7412.2427};
 			azimut=360.974;
-			id=162;
+			id=163;
 			side="EMPTY";
 			vehicle="RHS_UH60M_d";
 			skill=0.60000002;
@@ -2763,7 +2670,7 @@ class Mission
 		{
 			position[]={6982.5977,5,7437.4727};
 			azimut=718.66101;
-			id=163;
+			id=164;
 			side="EMPTY";
 			vehicle="RHS_M2A2_BUSKI";
 			skill=0.60000002;
@@ -2775,7 +2682,7 @@ class Mission
 		{
 			position[]={7001.9883,5,7437.229};
 			azimut=718.66101;
-			id=164;
+			id=165;
 			side="EMPTY";
 			vehicle="RHS_M2A2_BUSKI";
 			skill=0.60000002;
@@ -2787,7 +2694,7 @@ class Mission
 		{
 			position[]={6982.9702,5,7412.0786};
 			azimut=360.974;
-			id=165;
+			id=166;
 			side="EMPTY";
 			vehicle="RHS_UH60M_d";
 			skill=0.60000002;
@@ -2798,7 +2705,7 @@ class Mission
 		{
 			position[]={7002.6909,5,7411.1978};
 			azimut=360.974;
-			id=166;
+			id=167;
 			side="EMPTY";
 			vehicle="RHS_UH60M_d";
 			skill=0.60000002;
@@ -2809,7 +2716,7 @@ class Mission
 		{
 			position[]={7024.5308,5,7438.1733};
 			azimut=718.66101;
-			id=167;
+			id=168;
 			side="EMPTY";
 			vehicle="rhsusf_m1a1aimd_usarmy";
 			skill=0.60000002;
@@ -2821,7 +2728,7 @@ class Mission
 		{
 			position[]={7026.5908,5,7409.6738};
 			azimut=360.974;
-			id=168;
+			id=169;
 			side="EMPTY";
 			vehicle="RHS_AH64D";
 			skill=0.60000002;
@@ -2834,31 +2741,31 @@ class Mission
 		items=12;
 		class Item0
 		{
-			position[]={7862.6167,5,7578.7173};
+			position[]={7682.5044,5,7530.8027};
 			name="respawn_west";
 			type="Empty";
 		};
 		class Item1
 		{
-			position[]={7862.1812,5,7581.8911};
+			position[]={7682.0688,5,7533.9766};
 			name="respawn_east";
 			type="Empty";
 		};
 		class Item2
 		{
-			position[]={7866.0269,5,7581.9106};
+			position[]={7685.9146,5,7533.9961};
 			name="respawn_guerilla";
 			type="Empty";
 		};
 		class Item3
 		{
-			position[]={7865.521,5,7578.9565};
+			position[]={7685.4087,5,7531.042};
 			name="respawn_civilian";
 			type="Empty";
 		};
 		class Item4
 		{
-			position[]={7842.127,5,7580.2974};
+			position[]={7662.0146,5,7532.3828};
 			name="start";
 			type="Empty";
 		};
