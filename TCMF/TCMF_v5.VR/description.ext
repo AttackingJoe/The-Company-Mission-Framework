@@ -8,7 +8,6 @@
 //includes always go at the top
 #include "tb3\defines.hpp"
 //Separated Loadouts into its own cpp file
-//If you are just editing loadouts, you shouldn't mess with this. 
 #include "loadouts\IncludedLoadouts.cpp"
 //==========================================
 ==================================================================   
@@ -69,57 +68,6 @@
 
    
 //============================================================================================================   
-
-
-//Parameters   
-   class Params
-   {
-      class Daytime
-      {
-         title = "Time";
-         texts[] = {"Morning","Day","Evening","Night"};
-         values[] = {6,12,18,0};
-         default = 12;
-         function = "BIS_fnc_paramDaytime";
-         isGlobal = 1; 
-      };
-      class ViewDistance
-      {
-         title = "View distance (in metres)";
-         values[] = {500,1000,2000,5000};
-         default = 2000;
-         file = "parameters\setViewDistance.sqf"; 
-      };
-      class Terrain
-      {
-         title = "Set grass (density)";
-         texts[] = {"None","Low","Norm","High"};
-         values[] = {50,30,10,3.125};
-         default = 30;
-         file = "parameters\set_terrain.sqf"; 
-      };
-      /*
-      //Sample Boolean Parameter, turns a script on or off. remove the asterisk and slashes to enable.
-      class Sample
-      {
-         title = "Sample Boolean Parameter"; //The title that shows in the params selection screen
-         texts[] = {"Off","On"}; //The text options, if missing it will display the values
-         values[] = {0,1};//the possible values for the param
-         default = 1; //Default value of param
-         file = "parameters\sample.sqf"; //script to pass the value of the param to
-      };
-      */
-   };
-   
-   
-//============================================================================================================   
-   
-   
-
-
-
-//=============================================================================================================
-
 
 // Group marker cfg
 class CfgFunctions

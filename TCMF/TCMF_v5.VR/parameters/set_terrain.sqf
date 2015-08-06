@@ -1,1 +1,0 @@
-setTerrainGrid (_this select 0);
