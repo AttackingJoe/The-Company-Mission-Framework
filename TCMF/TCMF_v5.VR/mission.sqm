@@ -68,7 +68,7 @@ class Mission
 	randomSeed=11963703;
 	class Intel
 	{
-		briefingName="TCMF v5";
+		briefingName="TCMF v5.1";
 		overviewText="Made with TB3, edited by TC/IF Mission Making Teams";
 		resistanceWest=0;
 		startWeather=0;
@@ -1297,7 +1297,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.60000002;
 					text="UnitNATO_ASL";
-					init="[this,""USA"",""SL""] call tb3_fLoadout; ";
+					init="[this,""USA"",""SL""] call tb3_fLoadout; this setGroupId [""ASL""]; ASL = group this;";
 					description="Alpha SL";
 				};
 				class Item1
@@ -1309,7 +1309,7 @@ class Mission
 					vehicle="TC_L4_Blue";
 					skill=0.60000002;
 					text="UnitNATO_ASL_M";
-					init="[this,""USA"",""MED""] call tb3_fLoadout; ";
+					init="[this,""USA"",""MED""] call tb3_fLoadout; this setGroupId [""ASL""]; ASL = group this;";
 					description="Alpha Medic";
 				};
 			};
@@ -1332,7 +1332,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitNATO_A1_FTL";
-					init="[this,""USA"",""FTL""] call tb3_fLoadout; this setGroupId [""A1""]; A1 = group this; hint format [""%1"",typeOf this]";
+					init="[this,""USA"",""FTL""] call tb3_fLoadout; this setGroupId [""A1""]; A1 = group this; ";
 					description="A1 FTL";
 				};
 				class Item1
