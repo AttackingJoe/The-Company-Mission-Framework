@@ -7,20 +7,20 @@ waitUntil { TB3_INIT };
 //Group Markers
 f_script_setGroupMarkers = [] execVM "tb3\f\groupMarkers\f_setLocalGroupMarkers.sqf";
 
+//ACRE stuff
+//Full duplex means being able to hear and transmit at the same time.
+[true] call acre_api_fnc_setFullDuplex;
+//This allows for transmissions occurring at the same time to distort one another.
+[true] call acre_api_fnc_setInterference;
+//Allows AI to hear player speech.
+[true] call acre_api_fnc_setRevealToAI;
+//Add unique radio channels to each side.
+[true, true] call acre_api_fnc_setupMission;
+//Add unique languages to each side.
+[true] call acre_api_fnc_babelSetupMission;
+//NOTE: for adding a translator, see the translator.sqf file in the scripts folder.
 
 if (isServer) then {
-
 	// AI information sharing
 		[] execVM "scripts\ai\aiLink.sqf";
-	//Allow AI to get knocked unconscious 
-	//{_x setVariable ["AGM_AllowUnconscious", true]} forEach allUnits; - Not using this until it's not just a "snap to ground" when unconscious. It's too obvious.
-	
-	};
-
-	// Building Position Indicator
-		//[] execVM "scripts\posCheck.sqf";	
-
-
-
-	
-	
+};

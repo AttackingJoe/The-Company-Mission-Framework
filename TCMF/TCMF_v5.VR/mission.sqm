@@ -2812,7 +2812,7 @@ class Mission
 					player="PLAYER COMMANDER";
 					leader=1;
 					skill=0.60000002;
-					init="[this,""USA"",""FTL""] call tb3_fLoadout; this setGroupId [""A1""]; A1 = group this;";
+					init="[this,""USA"",""FTL""] call tb3_fLoadout; this setGroupId [""A1""]; A1 = group this; _lang = [this, ""civ"", ""ind""] execVM ""scripts\translator.sqf"";";
 				};
 			};
 		};
