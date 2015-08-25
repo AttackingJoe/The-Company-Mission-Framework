@@ -1,8 +1,4 @@
 [] execVM "briefing.sqf";  // briefings in sqf format have to called in the init
-
-// ORBAT Notes
-[] execVM "tb3\briefing\f_orbatNotes.sqf";
-
 player addrating 99999; // because fuck that "player turns hostile" shit 
 
 // wait until template is init and player synched
@@ -24,5 +20,7 @@ if (isServer) then {
 	// Building Position Indicator
 		//[] execVM "scripts\posCheck.sqf";	
 
-	player switchmove "AmovPknlMstpSlowWrflDnon"; //what's the purpose of this?
+
+
+	
 	
