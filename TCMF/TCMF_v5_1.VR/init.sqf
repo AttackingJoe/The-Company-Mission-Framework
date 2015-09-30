@@ -12,12 +12,12 @@ _acremain = true;
 //Allows AI to hear player speech.
 _acreaihear = true;
 //This allows for transmissions occurring at the same time to distort one another.It also means being able to hear and transmit at the same time.
-_acrerealisticinterfere = true;
+_acrerealint = true;
 //Add unique languages and radio channels to each side.
 _acrelangandfreq = true;
-//Add unique languages to each side.
+//Add unique languages to each side. If the unified option is enabled this must be false.
 _acrelang = false;
-//Add unique radio channels to each side.
+//Add unique radio channels to each side. If the unified option is enabled this must be false.
 _acrefreq = false;
 
 // wait until template is init and player synched
@@ -27,46 +27,35 @@ waitUntil { TB3_INIT };
 f_script_setGroupMarkers = [] execVM "tb3\f\groupMarkers\f_setLocalGroupMarkers.sqf";
 
 if (_acremain)then{
-systemChat "ADVANCED ACRE FUNCTIONALITY ON";
 	if (_acreaihear)then{
 		[true] call acre_api_fnc_setRevealToAI;
-		systemChat "ACRE AI HEARING ON";
 	}else{
 		[false] call acre_api_fnc_setRevealToAI;
-		systemChat "ACRE AI HEARING OFF";
 	};
 
-	if(_acrerealisticinterfere)then{
+	if(_acrerealint)then{
 		[true] call acre_api_fnc_setFullDuplex;
 		[true] call acre_api_fnc_setInterference;
-		systemChat "ACRE REALISTIC INTERFERENCE ON";
 	}else{
 		[false] call acre_api_fnc_setFullDuplex;
 		[false] call acre_api_fnc_setInterference;
-		systemChat "ACRE REALISTIC INTERFERENCE ON";
 	}; 
 
-	if ((_acrelangandfreq) && !(_acrefreq) && !(_acrelang))then{
+	if ((_acrelangandfreq) && !(_acrefreq || _acrelang))then{
 		[true, true] call acre_api_fnc_setupMission;
-		systemChat "ACRE UNIQUE FREQUENCIES AND BABEL ON";
 	}else{
 		if((_acrelang) or (_acrefreq) and (_acrelangandfreq))then{
 			systemChat "Please check your init.sqf, some ACRE variable is set incorrectly";
 		}else{
 			if (_acrelang)then{
 				[true] call acre_api_fnc_babelSetupMission;
-				systemChat "ACRE BABEL ON";
 			}else{
 				if (_acrefreq)then{
 					[false, true] call acre_api_fnc_setupMission;
-					systemChat "ACRE UNIQUE FREQUENCIES ON";
 				};
 			};
 		};
 	};
-
-}else{
-systemChat "ADVANCED ACRE FUNCTIONALITY OFF";
 };
 
 
