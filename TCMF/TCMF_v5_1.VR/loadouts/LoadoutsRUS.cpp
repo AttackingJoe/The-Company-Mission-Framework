@@ -133,7 +133,7 @@ class RUS {
 			#define ap_mine "rhs_mine_pmn2_mag"
 			#define minedetector "MineDetector"
 			#define binoculars "Binocular"
-			#define range_finder "BWA3_Vector"
+			#define range_finder "rhs_pdu4"
 			#define laserd "Laserdesignator"
 			#define battery "Laserbatteries"
 			
@@ -179,9 +179,9 @@ class RUS {
 			
 			//=== EQUIPMENT ===
 			//MUST BE ONE LINE
-			#define leader_equipment "ItemMap","ItemGPS","ItemCompass"//With GPS
-			#define default_equipment "ItemMap","ItemCompass"
-			#define crew_equipment "ItemMap","ItemGPS","ItemCompass","ace_NVG_Gen4" //With GPs and NVG for vic crews
+			#define leader_equipment "ItemWatch","ItemMap","ItemGPS","ItemCompass"//With GPS
+			#define default_equipment "ItemWatch","ItemMap","ItemCompass"
+			#define crew_equipment "ItemWatch","ItemMap","ItemGPS","ItemCompass","ace_NVG_Gen4" //With GPs and NVG for vic crews
 			//========================Class Loadouts Definitions========================
 			//================Platoon Leader==================
 			class PC {
