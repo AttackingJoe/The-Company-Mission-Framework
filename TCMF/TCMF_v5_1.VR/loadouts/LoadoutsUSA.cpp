@@ -25,9 +25,8 @@ class USA {
 			//		MARK		- Marksman
 			//		SN			- Sniper
 			//		SP			- Spotter (for sniper) 
-			//		VC			- Vehicle Crew
-			//		PILJ		- Jet/Plane pilot / co-pilot 
-			//		PILH		- Helicopter pilot / co-pilot
+			//		VC			- Vehicle Crew 
+			//		PIL		    -Pilot / Aircrew
 			//		ENG			- Engineer
 			//
 			//		Vehicle Cargo Loadouts
@@ -168,7 +167,8 @@ class USA {
 			#define default_backpack "rhsusf_assault_eagleaiii_ocp"
 			#define crew_backpack "rhsusf_assault_eagleaiii_ocp"
 			#define engineer_backpack "B_Kitbag_cbr"
-			
+			#define mortg_backpack "O_Mortar_01_weapon_F"
+			#define morta_backpack "O_Mortar_01_support_F"
 			
 			//Vests
 			#define vest_default "rhsusf_iotv_ocp_rifleman"
@@ -329,16 +329,13 @@ class USA {
 			};
 			
 			//================Mortar Leader==================
-			class MOL {
+			class MOLG {
 				weapons[] = {rifle,binoculars};
 				magazines[] = {	}; //do not use if using specific allocation of magazines
-				backpack[] = {default_backpack};
+				backpack[] = {mortg_backpack};
 					backpackMagazines[] = {
 					};
 					backpackItems[] = {
-						ace_default,
-						{ACE_epinephrine,1},
-						{ace_mrangetable, 1}						
 					};
 				headgear[] = {leader_headgear};
 				uniform[] = {default_uniform};
@@ -348,13 +345,48 @@ class USA {
 					    {smokegrenadewhite,2},
 						{grenade,2},
 						{long_range,1},
-						{short_range,1}
+						{short_range,1},
+						ace_default,
+						{ACE_epinephrine,1},
+						{ace_mrangetable, 1}
 					};
 				goggles[] = {};
 				vest[] = {vest_ftl_leader};
 					vestMagazines[] = {
-						{riflemag,7},
-						
+						{riflemag,7}
+					};
+				assignedItems[] = {leader_equipment};
+				items[] = {	}; //do not use if using specific allocation of items
+				
+				priKit[] = {};
+				secKit[] = {};
+			};
+			//================Mortar Assist==================
+			class MOLA {
+				weapons[] = {rifle,binoculars};
+				magazines[] = {	}; //do not use if using specific allocation of magazines
+				backpack[] = {morta_backpack};
+					backpackMagazines[] = {
+					};
+					backpackItems[] = {	
+					};
+				headgear[] = {leader_headgear};
+				uniform[] = {default_uniform};
+					uniformMagazines[] = {
+					};
+					uniformItems[] = {
+					    {smokegrenadewhite,2},
+						{grenade,2},
+						{long_range,1},
+						{short_range,1},
+						ace_default,
+						{ACE_epinephrine,1},
+						{ace_mrangetable, 1}
+					};
+				goggles[] = {};
+				vest[] = {vest_ftl_leader};
+					vestMagazines[] = {
+						{riflemag,7}
 					};
 				assignedItems[] = {leader_equipment};
 				items[] = {	}; //do not use if using specific allocation of items
@@ -801,41 +833,8 @@ class USA {
 				priKit[] = {};
 				secKit[] = {};
 			};
-			//================Pilot Jet / Plane==================
-			class PILJ {
-				weapons[] = {smg};
-				magazines[] = {	}; //do not use if using specific allocation of magazines
-				backpack[] = {crew_backpack};
-					backpackMagazines[] = {
-					    {smgmag,2}
-					};
-					backpackItems[] = {
-						ace_default,
-						{ACE_epinephrine,1},
-						{toolkit,1}
-					};
-				headgear[] = {pilot_headgear};
-				uniform[] = {default_uniform};
-					uniformMagazines[] = {
-					};
-					uniformItems[] = {
-					    {smokegrenadewhite,2},
-						{long_range,1},
-						{short_range,1}
-					};
-				goggles[] = {};
-				vest[] = {vest_vehiclecrew};
-					vestMagazines[] = {
-						{smgmag,2},
-					};
-				assignedItems[] = {crew_equipment};
-				items[] = {	}; //do not use if using specific allocation of items
-				
-				priKit[] = {};
-				secKit[] = {};
-			};
-			//================Pilot Helicopter==================
-			class PILH {
+			//================Pilot==================
+			class PIL {
 				weapons[] = {smg};
 				magazines[] = {	}; //do not use if using specific allocation of magazines
 				backpack[] = {crew_backpack};

@@ -88,7 +88,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=65;
+		items=63;
 		class Item0
 		{
 			side="LOGIC";
@@ -205,19 +205,32 @@ class Mission
 			side="EAST";
 			class Vehicles
 			{
-				items=1;
+				items=2;
 				class Item0
 				{
-					position[]={135.92386,5,120.43311};
+					position[]={134.88849,5,119.24659};
 					special="NONE";
 					id=6;
 					side="EAST";
 					vehicle="TC_L4_Red";
 					leader=1;
 					skill=0.60000002;
-					text="UnitCSAT_ENG1_MINE";
-					init="[this,""RUS"",""ENGMINE""] call tb3_fLoadout; this setGroupId [""ENG1_MINE""]; OP_ENG1_MINE = group this;";
+					text="UnitCSAT_MOLA";
+					init="[this,""RUS"",""MOLA""] call tb3_fLoadout; this setGroupId [""MTR1""]; MTR1 = group this;";
 					description="Engineer (Mines)";
+				};
+				class Item1
+				{
+					position[]={132.55521,5,120.39355};
+					special="NONE";
+					id=7;
+					side="EAST";
+					vehicle="TC_L4_Red";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="UnitCSAT_MOLG";
+					init="[this,""RUS"",""MOLG""] call tb3_fLoadout; this setGroupId [""MTR1""]; MTR1 = group this;";
+					description="Engineer (Demo)";
 				};
 			};
 		};
@@ -231,7 +244,7 @@ class Mission
 				{
 					position[]={81.123856,5,136.04443};
 					special="NONE";
-					id=7;
+					id=8;
 					side="EAST";
 					vehicle="TC_L3_Red";
 					leader=1;
@@ -245,7 +258,7 @@ class Mission
 				{
 					position[]={78.177567,5,132.40674};
 					special="NONE";
-					id=8;
+					id=9;
 					side="EAST";
 					vehicle="TC_L4_Red";
 					rank="CORPORAL";
@@ -258,7 +271,7 @@ class Mission
 				{
 					position[]={84.716629,5,132.50439};
 					special="NONE";
-					id=9;
+					id=10;
 					side="EAST";
 					vehicle="TC_L4_Red";
 					rank="SERGEANT";
@@ -279,7 +292,7 @@ class Mission
 				{
 					position[]={136.03812,5,115.46875};
 					special="NONE";
-					id=10;
+					id=11;
 					side="EAST";
 					vehicle="TC_L4_Red";
 					leader=1;
@@ -293,7 +306,7 @@ class Mission
 				{
 					position[]={138.89163,5,113.71338};
 					special="NONE";
-					id=11;
+					id=12;
 					side="EAST";
 					vehicle="TC_L4_Red";
 					skill=0.60000002;
@@ -313,7 +326,7 @@ class Mission
 				{
 					position[]={53.620865,5,34.242676};
 					special="NONE";
-					id=12;
+					id=13;
 					side="EAST";
 					vehicle="TC_L8_Red";
 					leader=1;
@@ -326,25 +339,25 @@ class Mission
 				class Item1
 				{
 					position[]={55.006607,5,32.691406};
-					id=13;
+					id=14;
 					side="EAST";
 					vehicle="TC_L8_Red";
 					rank="LIEUTENANT";
 					skill=0.60000002;
 					text="UnitCSAT_TH1_C";
-					init="[this,""RUS"",""PILR""] call tb3_fLoadout; this setGroupId [""TH1""]; Op_TH1 = group this;";
+					init="[this,""RUS"",""PIL""] call tb3_fLoadout; this setGroupId [""TH1""]; Op_TH1 = group this;";
 					description="TH1 Crew Chief";
 				};
 				class Item2
 				{
 					position[]={56.615005,5,31.095215};
 					special="NONE";
-					id=14;
+					id=15;
 					side="EAST";
 					vehicle="TC_L8_Red";
 					skill=0.60000002;
 					text="UnitCSAT_TH1_AC";
-					init="[this,""RUS"",""AIRCR""] call tb3_fLoadout; this setGroupId [""TH1""]; Op_TH1 = group this;";
+					init="[this,""RUS"",""PIL""] call tb3_fLoadout; this setGroupId [""TH1""]; Op_TH1 = group this;";
 					description="TH1 Air Crewman";
 				};
 			};
@@ -359,7 +372,7 @@ class Mission
 				{
 					position[]={129.25931,5,120.28271};
 					special="NONE";
-					id=15;
+					id=16;
 					side="EAST";
 					vehicle="TC_L4_Red";
 					leader=1;
@@ -371,27 +384,6 @@ class Mission
 			};
 		};
 		class Item10
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={132.55521,5,120.39355};
-					special="NONE";
-					id=16;
-					side="EAST";
-					vehicle="TC_L4_Red";
-					leader=1;
-					skill=0.60000002;
-					text="UnitCSAT_ENG1_DEMO";
-					init="[this,""RUS"",""ENGDEMO""] call tb3_fLoadout; this setGroupId [""ENG1_DEMO""]; Op_ENG1_DEMO = group this;";
-					description="Engineer (Demo)";
-				};
-			};
-		};
-		class Item11
 		{
 			side="CIV";
 			class Vehicles
@@ -410,7 +402,7 @@ class Mission
 				};
 			};
 		};
-		class Item12
+		class Item11
 		{
 			side="EAST";
 			class Vehicles
@@ -443,7 +435,7 @@ class Mission
 				};
 			};
 		};
-		class Item13
+		class Item12
 		{
 			side="EAST";
 			class Vehicles
@@ -464,7 +456,7 @@ class Mission
 				};
 			};
 		};
-		class Item14
+		class Item13
 		{
 			side="EAST";
 			class Vehicles
@@ -500,7 +492,7 @@ class Mission
 				};
 			};
 		};
-		class Item15
+		class Item14
 		{
 			side="EAST";
 			class Vehicles
@@ -558,7 +550,7 @@ class Mission
 				};
 			};
 		};
-		class Item16
+		class Item15
 		{
 			side="EAST";
 			class Vehicles
@@ -575,7 +567,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitCSAT_TNK1_VC";
-					init="[this,""RUS"",""VC""] call tb3_fLoadout; this setGroupId [""TNK3""]; Op_TNK3 = group this;";
+					init="[this,""RUS"",""VC""] call tb3_fLoadout; this setGroupId [""TNK1""]; Op_TNK1 = group this;";
 					description="TANK1 Commander";
 				};
 				class Item1
@@ -587,7 +579,7 @@ class Mission
 					vehicle="TC_L4_Red";
 					skill=0.60000002;
 					text="UnitCSAT_TNK1_D";
-					init="[this,""RUS"",""VD""] call tb3_fLoadout; this setGroupId [""TNK3""]; Op_TNK3 = group this;";
+					init="[this,""RUS"",""VC""] call tb3_fLoadout; this setGroupId [""TNK1""]; Op_TNK1 = group this;";
 					description="TANK1 Driver";
 				};
 				class Item2
@@ -599,12 +591,12 @@ class Mission
 					vehicle="TC_L4_Red";
 					skill=0.60000002;
 					text="UnitCSAT_TNK1_G";
-					init="[this,""RUS"",""VG""] call tb3_fLoadout; this setGroupId [""TNK3""]; Op_TNK3 = group this;";
+					init="[this,""RUS"",""VC""] call tb3_fLoadout; this setGroupId [""TNK1""]; Op_TNK1 = group this;";
 					description="TANK1 Gunner";
 				};
 			};
 		};
-		class Item17
+		class Item16
 		{
 			side="EAST";
 			class Vehicles
@@ -662,7 +654,7 @@ class Mission
 				};
 			};
 		};
-		class Item18
+		class Item17
 		{
 			side="EAST";
 			class Vehicles
@@ -698,7 +690,7 @@ class Mission
 				};
 			};
 		};
-		class Item19
+		class Item18
 		{
 			side="EAST";
 			class Vehicles
@@ -756,7 +748,7 @@ class Mission
 				};
 			};
 		};
-		class Item20
+		class Item19
 		{
 			side="EAST";
 			class Vehicles
@@ -814,7 +806,7 @@ class Mission
 				};
 			};
 		};
-		class Item21
+		class Item20
 		{
 			side="EAST";
 			class Vehicles
@@ -850,7 +842,7 @@ class Mission
 				};
 			};
 		};
-		class Item22
+		class Item21
 		{
 			side="EAST";
 			class Vehicles
@@ -908,7 +900,7 @@ class Mission
 				};
 			};
 		};
-		class Item23
+		class Item22
 		{
 			side="EAST";
 			class Vehicles
@@ -966,7 +958,7 @@ class Mission
 				};
 			};
 		};
-		class Item24
+		class Item23
 		{
 			side="EAST";
 			class Vehicles
@@ -995,7 +987,7 @@ class Mission
 					vehicle="TC_L4_Red";
 					skill=0.60000002;
 					text="UnitCSAT_IFV1_G";
-					init="[this,""RUS"",""VG""] call tb3_fLoadout; this setGroupId [""IFV1""]; Op_IFV1 = group this;";
+					init="[this,""RUS"",""VC""] call tb3_fLoadout; this setGroupId [""IFV1""]; Op_IFV1 = group this;";
 					description="IFV1 Gunner";
 				};
 				class Item2
@@ -1007,12 +999,12 @@ class Mission
 					vehicle="TC_L4_Red";
 					skill=0.60000002;
 					text="UnitCSAT_IFV1_D";
-					init="[this,""RUS"",""VD""] call tb3_fLoadout; this setGroupId [""IFV1""]; Op_IFV1 = group this;";
+					init="[this,""RUS"",""VC""] call tb3_fLoadout; this setGroupId [""IFV1""]; Op_IFV1 = group this;";
 					description="IFV1 Driver";
 				};
 			};
 		};
-		class Item25
+		class Item24
 		{
 			side="EAST";
 			class Vehicles
@@ -1041,7 +1033,7 @@ class Mission
 					vehicle="TC_L4_Red";
 					skill=0.60000002;
 					text="UnitCSAT_IFV2_G";
-					init="[this,""RUS"",""VG""] call tb3_fLoadout; this setGroupId [""IFV2""]; Op_IFV2 = group this;";
+					init="[this,""RUS"",""VC""] call tb3_fLoadout; this setGroupId [""IFV2""]; Op_IFV2 = group this;";
 					description="IFV2 Gunner";
 				};
 				class Item2
@@ -1053,12 +1045,12 @@ class Mission
 					vehicle="TC_L4_Red";
 					skill=0.60000002;
 					text="UnitCSAT_IFV2_D";
-					init="[this,""RUS"",""VD""] call tb3_fLoadout; this setGroupId [""IFV2""]; Op_IFV2 = group this;";
+					init="[this,""RUS"",""VC""] call tb3_fLoadout; this setGroupId [""IFV2""]; Op_IFV2 = group this;";
 					description="IFV2 Driver";
 				};
 			};
 		};
-		class Item26
+		class Item25
 		{
 			side="EAST";
 			class Vehicles
@@ -1087,7 +1079,7 @@ class Mission
 					vehicle="TC_L4_Red";
 					skill=0.60000002;
 					text="UnitCSAT_IFV3_G";
-					init="[this,""RUS"",""VG""] call tb3_fLoadout; this setGroupId [""IFV3""]; Op_IFV3 = group this;";
+					init="[this,""RUS"",""VC""] call tb3_fLoadout; this setGroupId [""IFV3""]; Op_IFV3 = group this;";
 					description="IFV3 Gunner";
 				};
 				class Item2
@@ -1099,12 +1091,12 @@ class Mission
 					vehicle="TC_L4_Red";
 					skill=0.60000002;
 					text="UnitCSAT_IFV3_D";
-					init="[this,""RUS"",""VD""] call tb3_fLoadout; this setGroupId [""IFV3""]; Op_IFV3 = group this;";
+					init="[this,""RUS"",""VC""] call tb3_fLoadout; this setGroupId [""IFV3""]; Op_IFV3 = group this;";
 					description="IFV3 Driver";
 				};
 			};
 		};
-		class Item27
+		class Item26
 		{
 			side="EAST";
 			class Vehicles
@@ -1133,7 +1125,7 @@ class Mission
 					rank="LIEUTENANT";
 					skill=0.60000002;
 					text="UnitCSAT_TH2_C";
-					init="[this,""RUS"",""PILR""] call tb3_fLoadout; this setGroupId [""TH2""]; Op_TH2 = group this;";
+					init="[this,""RUS"",""PIL""] call tb3_fLoadout; this setGroupId [""TH2""]; Op_TH2 = group this;";
 					description="TH2 Crew Chief";
 				};
 				class Item2
@@ -1145,12 +1137,12 @@ class Mission
 					vehicle="TC_L8_Red";
 					skill=0.60000002;
 					text="UnitCSAT_TH2_AC";
-					init="[this,""RUS"",""AIRCR""] call tb3_fLoadout; this setGroupId [""TH2""]; Op_TH2 = group this;";
+					init="[this,""RUS"",""PIL""] call tb3_fLoadout; this setGroupId [""TH2""]; Op_TH2 = group this;";
 					description="TH2 Air Crewman";
 				};
 			};
 		};
-		class Item28
+		class Item27
 		{
 			side="EAST";
 			class Vehicles
@@ -1179,7 +1171,7 @@ class Mission
 					rank="LIEUTENANT";
 					skill=0.60000002;
 					text="UnitCSAT_TH3_C";
-					init="[this,""RUS"",""PILR""] call tb3_fLoadout; this setGroupId [""TH3""]; Op_TH3 = group this;";
+					init="[this,""RUS"",""PIL""] call tb3_fLoadout; this setGroupId [""TH3""]; Op_TH3 = group this;";
 					description="TH3 Crew Chief";
 				};
 				class Item2
@@ -1191,12 +1183,12 @@ class Mission
 					vehicle="TC_L8_Red";
 					skill=0.60000002;
 					text="UnitCSAT_TH3_AC";
-					init="[this,""RUS"",""AIRCR""] call tb3_fLoadout; this setGroupId [""TH3""]; Op_TH3 = group this;";
+					init="[this,""RUS"",""PIL""] call tb3_fLoadout; this setGroupId [""TH3""]; Op_TH3 = group this;";
 					description="TH3 Air Crewman";
 				};
 			};
 		};
-		class Item29
+		class Item28
 		{
 			side="EAST";
 			class Vehicles
@@ -1225,12 +1217,12 @@ class Mission
 					rank="LIEUTENANT";
 					skill=0.60000002;
 					text="UnitCSAT_AH1_G";
-					init="[this,""RUS"",""PILR""] call tb3_fLoadout; this setGroupId [""AH1""]; Op_AH1 = group this;";
+					init="[this,""RUS"",""PIL""] call tb3_fLoadout; this setGroupId [""AH1""]; Op_AH1 = group this;";
 					description="aH1 Gunner";
 				};
 			};
 		};
-		class Item30
+		class Item29
 		{
 			side="WEST";
 			class Vehicles
@@ -1279,7 +1271,7 @@ class Mission
 				};
 			};
 		};
-		class Item31
+		class Item30
 		{
 			side="WEST";
 			class Vehicles
@@ -1314,7 +1306,7 @@ class Mission
 				};
 			};
 		};
-		class Item32
+		class Item31
 		{
 			side="WEST";
 			class Vehicles
@@ -1373,7 +1365,7 @@ class Mission
 				};
 			};
 		};
-		class Item33
+		class Item32
 		{
 			side="WEST";
 			class Vehicles
@@ -1432,7 +1424,7 @@ class Mission
 				};
 			};
 		};
-		class Item34
+		class Item33
 		{
 			side="WEST";
 			class Vehicles
@@ -1467,7 +1459,7 @@ class Mission
 				};
 			};
 		};
-		class Item35
+		class Item34
 		{
 			side="WEST";
 			class Vehicles
@@ -1526,7 +1518,7 @@ class Mission
 				};
 			};
 		};
-		class Item36
+		class Item35
 		{
 			side="WEST";
 			class Vehicles
@@ -1585,7 +1577,7 @@ class Mission
 				};
 			};
 		};
-		class Item37
+		class Item36
 		{
 			side="WEST";
 			class Vehicles
@@ -1620,7 +1612,7 @@ class Mission
 				};
 			};
 		};
-		class Item38
+		class Item37
 		{
 			side="WEST";
 			class Vehicles
@@ -1679,7 +1671,7 @@ class Mission
 				};
 			};
 		};
-		class Item39
+		class Item38
 		{
 			side="WEST";
 			class Vehicles
@@ -1738,12 +1730,12 @@ class Mission
 				};
 			};
 		};
-		class Item40
+		class Item39
 		{
 			side="WEST";
 			class Vehicles
 			{
-				items=1;
+				items=2;
 				class Item0
 				{
 					position[]={143.58307,5,503.37891};
@@ -1754,13 +1746,25 @@ class Mission
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
-					text="UnitNATO_ENG1_DEMO";
-					init="[this,""USA"",""ENGDEMO""] call tb3_fLoadout; this setGroupId [""ENG1_DEMO""]; ENG1_DEMO = group this;";
+					text="UnitNATO_MOLG";
+					init="[this,""USA"",""MOLG""] call tb3_fLoadout; this setGroupId [""MTR1""]; MTR1 = group this;";
 					description="Engineer (Demo)";
+				};
+				class Item1
+				{
+					position[]={145.36702,5,502.08789};
+					azimut=362.01501;
+					id=105;
+					side="WEST";
+					vehicle="TC_L4_Blue";
+					skill=0.60000002;
+					text="UnitNATO_MOLA";
+					init="[this,""USA"",""MOLA""] call tb3_fLoadout; this setGroupId [""MTR1""]; MTR1 = group this;";
+					description="Engineer (Mines)";
 				};
 			};
 		};
-		class Item41
+		class Item40
 		{
 			side="WEST";
 			class Vehicles
@@ -1770,7 +1774,7 @@ class Mission
 				{
 					position[]={141.32233,5,503.36182};
 					azimut=362.01501;
-					id=105;
+					id=106;
 					side="WEST";
 					vehicle="TC_L4_Blue";
 					player="PLAY CDG";
@@ -1783,29 +1787,7 @@ class Mission
 				};
 			};
 		};
-		class Item42
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={145.71637,5,503.37988};
-					azimut=362.01501;
-					id=106;
-					side="WEST";
-					vehicle="TC_L4_Blue";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="UnitNATO_ENG1_MINE";
-					init="[this,""USA"",""ENGMINE""] call tb3_fLoadout; this setGroupId [""ENG1_MINE""]; ENG1_MINE = group this;";
-					description="Engineer (Mines)";
-				};
-			};
-		};
-		class Item43
+		class Item41
 		{
 			side="WEST";
 			class Vehicles
@@ -1839,7 +1821,7 @@ class Mission
 				};
 			};
 		};
-		class Item44
+		class Item42
 		{
 			side="WEST";
 			class Vehicles
@@ -1874,7 +1856,7 @@ class Mission
 				};
 			};
 		};
-		class Item45
+		class Item43
 		{
 			side="WEST";
 			class Vehicles
@@ -1909,7 +1891,7 @@ class Mission
 				};
 			};
 		};
-		class Item46
+		class Item44
 		{
 			side="WEST";
 			class Vehicles
@@ -1931,7 +1913,7 @@ class Mission
 				};
 			};
 		};
-		class Item47
+		class Item45
 		{
 			side="WEST";
 			class Vehicles
@@ -1961,7 +1943,7 @@ class Mission
 					vehicle="TC_L4_Blue";
 					skill=0.60000002;
 					text="UnitNATO_IFV1_VD";
-					init="[this,""USA"",""VD""] call tb3_fLoadout; this setGroupId [""IFV1""]; IFV1 = group this;";
+					init="[this,""USA"",""VC""] call tb3_fLoadout; this setGroupId [""IFV1""]; IFV1 = group this;";
 					description="IFV1 Driver";
 				};
 				class Item2
@@ -1973,12 +1955,12 @@ class Mission
 					vehicle="TC_L4_Blue";
 					skill=0.60000002;
 					text="UnitNATO_IFV1_VG";
-					init="[this,""USA"",""VG""] call tb3_fLoadout; this setGroupId [""IFV1""]; IFV1 = group this;";
+					init="[this,""USA"",""VC""] call tb3_fLoadout; this setGroupId [""IFV1""]; IFV1 = group this;";
 					description="IFV1 Gunner";
 				};
 			};
 		};
-		class Item48
+		class Item46
 		{
 			side="WEST";
 			class Vehicles
@@ -2009,7 +1991,7 @@ class Mission
 					rank="LIEUTENANT";
 					skill=0.60000002;
 					text="UnitNATO_TH1_C";
-					init="[this,""USA"",""PILR""] call tb3_fLoadout; this setGroupId [""TH1""]; TH1 = group this;";
+					init="[this,""USA"",""PIL""] call tb3_fLoadout; this setGroupId [""TH1""]; TH1 = group this;";
 					description="TH1 Crew Chief";
 				};
 				class Item2
@@ -2022,12 +2004,12 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitNATO_TH1_AC";
-					init="[this,""USA"",""AIRCR""] call tb3_fLoadout; this setGroupId [""TH1""]; TH1 = group this;";
+					init="[this,""USA"",""PIL""] call tb3_fLoadout; this setGroupId [""TH1""]; TH1 = group this;";
 					description="TH1 Air Crewman";
 				};
 			};
 		};
-		class Item49
+		class Item47
 		{
 			side="WEST";
 			class Vehicles
@@ -2057,7 +2039,7 @@ class Mission
 					vehicle="TC_L4_Blue";
 					skill=0.60000002;
 					text="UnitNATO_IFV2_VD";
-					init="[this,""USA"",""VD""] call tb3_fLoadout; this setGroupId [""IFV2""]; IFV2 = group this;";
+					init="[this,""USA"",""VC""] call tb3_fLoadout; this setGroupId [""IFV2""]; IFV2 = group this;";
 					description="IFV2 Driver";
 				};
 				class Item2
@@ -2069,12 +2051,12 @@ class Mission
 					vehicle="TC_L4_Blue";
 					skill=0.60000002;
 					text="UnitNATO_IFV2_VG";
-					init="[this,""USA"",""VG""] call tb3_fLoadout; this setGroupId [""IFV2""]; IFV2 = group this;";
+					init="[this,""USA"",""VC""] call tb3_fLoadout; this setGroupId [""IFV2""]; IFV2 = group this;";
 					description="IFV2 Gunner";
 				};
 			};
 		};
-		class Item50
+		class Item48
 		{
 			side="WEST";
 			class Vehicles
@@ -2104,7 +2086,7 @@ class Mission
 					vehicle="TC_L4_Blue";
 					skill=0.60000002;
 					text="UnitNATO_IFV3_VD";
-					init="[this,""USA"",""VD""] call tb3_fLoadout; this setGroupId [""IFV3""]; IFV3 = group this;";
+					init="[this,""USA"",""VC""] call tb3_fLoadout; this setGroupId [""IFV3""]; IFV3 = group this;";
 					description="IFV3 Driver";
 				};
 				class Item2
@@ -2116,12 +2098,12 @@ class Mission
 					vehicle="TC_L4_Blue";
 					skill=0.60000002;
 					text="UnitNATO_IFV3_VG";
-					init="[this,""USA"",""VG""] call tb3_fLoadout; this setGroupId [""IFV3""]; IFV3 = group this;";
+					init="[this,""USA"",""VC""] call tb3_fLoadout; this setGroupId [""IFV3""]; IFV3 = group this;";
 					description="IFV3 Gunner";
 				};
 			};
 		};
-		class Item51
+		class Item49
 		{
 			side="WEST";
 			class Vehicles
@@ -2152,7 +2134,7 @@ class Mission
 					rank="LIEUTENANT";
 					skill=0.60000002;
 					text="UnitNATO_TH2_C";
-					init="[this,""USA"",""PILR""] call tb3_fLoadout; this setGroupId [""TH2""]; TH2 = group this;";
+					init="[this,""USA"",""PIL""] call tb3_fLoadout; this setGroupId [""TH2""]; TH2 = group this;";
 					description="TH2 Crew Chief";
 				};
 				class Item2
@@ -2165,12 +2147,12 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitNATO_TH2_AC";
-					init="[this,""USA"",""AIRCR""] call tb3_fLoadout; this setGroupId [""TH2""]; TH2 = group this;";
+					init="[this,""USA"",""PIL""] call tb3_fLoadout; this setGroupId [""TH2""]; TH2 = group this;";
 					description="TH2 Air Crewman";
 				};
 			};
 		};
-		class Item52
+		class Item50
 		{
 			side="WEST";
 			class Vehicles
@@ -2201,7 +2183,7 @@ class Mission
 					rank="LIEUTENANT";
 					skill=0.60000002;
 					text="UnitNATO_TH3_C";
-					init="[this,""USA"",""PILR""] call tb3_fLoadout; this setGroupId [""TH3""]; TH3 = group this;";
+					init="[this,""USA"",""PIL""] call tb3_fLoadout; this setGroupId [""TH3""]; TH3 = group this;";
 					description="TH3 Crew Chief";
 				};
 				class Item2
@@ -2214,12 +2196,12 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitNATO_TH3_AC";
-					init="[this,""USA"",""AIRCR""] call tb3_fLoadout; this setGroupId [""TH3""]; TH3 = group this;";
+					init="[this,""USA"",""PIL""] call tb3_fLoadout; this setGroupId [""TH3""]; TH3 = group this;";
 					description="TH3 Air Crewman";
 				};
 			};
 		};
-		class Item53
+		class Item51
 		{
 			side="WEST";
 			class Vehicles
@@ -2249,7 +2231,7 @@ class Mission
 					vehicle="TC_L4_Blue";
 					skill=0.60000002;
 					text="UnitNATO_TNK1_VD";
-					init="[this,""USA"",""VD""] call tb3_fLoadout; this setGroupId [""TNK1""]; TNK1 = group this;";
+					init="[this,""USA"",""VC""] call tb3_fLoadout; this setGroupId [""TNK1""]; TNK1 = group this;";
 					description="TANK1 Driver";
 				};
 				class Item2
@@ -2261,12 +2243,12 @@ class Mission
 					vehicle="TC_L4_Blue";
 					skill=0.60000002;
 					text="UnitNATO_TNK1_VG";
-					init="[this,""USA"",""VG""] call tb3_fLoadout; this setGroupId [""TNK1""]; TNK1 = group this;";
+					init="[this,""USA"",""VC""] call tb3_fLoadout; this setGroupId [""TNK1""]; TNK1 = group this;";
 					description="TANK1 Gunner";
 				};
 			};
 		};
-		class Item54
+		class Item52
 		{
 			side="WEST";
 			class Vehicles
@@ -2284,7 +2266,7 @@ class Mission
 					rank="LIEUTENANT";
 					skill=0.60000002;
 					text="UnitNATO_AH1_P";
-					init="[this,""USA"",""PIL""] call tb3_fLoadout; this setGroupId [""AH3""]; AH3 = group this;";
+					init="[this,""USA"",""PIL""] call tb3_fLoadout; this setGroupId [""AH1""]; AH1 = group this;";
 					description="AH1 Pilot";
 				};
 				class Item1
@@ -2297,12 +2279,12 @@ class Mission
 					rank="LIEUTENANT";
 					skill=0.60000002;
 					text="UnitNATO_AH1_G";
-					init="[this,""USA"",""PILR""] call tb3_fLoadout; this setGroupId [""AH3""]; AH3 = group this;";
+					init="[this,""USA"",""PIL""] call tb3_fLoadout; this setGroupId [""AH1""]; AH1 = group this;";
 					description="AH1 Gunner";
 				};
 			};
 		};
-		class Item55
+		class Item53
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2348,7 +2330,7 @@ class Mission
 				};
 			};
 		};
-		class Item56
+		class Item54
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2366,7 +2348,7 @@ class Mission
 				};
 			};
 		};
-		class Item57
+		class Item55
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2448,7 +2430,7 @@ class Mission
 				};
 			};
 		};
-		class Item58
+		class Item56
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2476,7 +2458,7 @@ class Mission
 				};
 			};
 		};
-		class Item59
+		class Item57
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2534,7 +2516,7 @@ class Mission
 				};
 			};
 		};
-		class Item60
+		class Item58
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2580,7 +2562,7 @@ class Mission
 				};
 			};
 		};
-		class Item61
+		class Item59
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2632,7 +2614,7 @@ class Mission
 				};
 			};
 		};
-		class Item62
+		class Item60
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2672,7 +2654,7 @@ class Mission
 				};
 			};
 		};
-		class Item63
+		class Item61
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2797,7 +2779,7 @@ class Mission
 				};
 			};
 		};
-		class Item64
+		class Item62
 		{
 			side="WEST";
 			class Vehicles
