@@ -185,9 +185,9 @@ class USA {
 			
 			//=== EQUIPMENT ===
 			//MUST BE ONE LINE
-			#define leader_equipment "ItemMap","ItemGPS","ItemCompass"//With GPS
-			#define default_equipment "ItemMap","ItemCompass"
-			#define crew_equipment "ItemMap","ItemGPS","ItemCompass","ACE_NVG_Gen4" //With GPs and NVG for vic crews
+			#define leader_equipment "ItemMap","ItemGPS","ItemCompass","ItemWatch"//With GPS
+			#define default_equipment "ItemMap","ItemCompass","ItemWatch"
+			#define crew_equipment "ItemMap","ItemGPS","ItemCompass","ACE_NVG_Gen4","ItemWatch" //With GPs and NVG for vic crews
 			
 			//========================Class Loadouts Definitions========================
 			//================Platoon Leader==================
