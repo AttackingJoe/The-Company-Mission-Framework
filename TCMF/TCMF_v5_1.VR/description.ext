@@ -14,10 +14,10 @@
 //MISSION MAKER THIS IS THE BLOCK YOU SHOULD EDIT!!!!!
 
    /* Adds screen when loading. */
-   author = "tb3/HawkBlade/Lord of the underworld, Oaklawyer/Based God AttackingJoe, Hail Him!/His Gloriousness thealmightyn00b";//Change to your name
-   onLoadName = "Mission Template"; //were going to laugh at you if you dont change this
+   author = "Your Name Here";//Change to your name
+   onLoadName = "Your mission name here"; //were going to laugh at you if you dont change this
    loadScreen = "logo.paa";//no touchy, unless you know what you're doing
-   onLoadMission = "Made by tb3, edited by Lord of the underworld, Oaklawyer, HawkBlade, Based God AttackingJoe, Hail Him!, and His Gloriousness thealmightyn00b for TC";//Change to your text   
+   onLoadMission = "Add a description of your mission here.";//Change to your text   
    onLoadMissionTime = true;
    
    respawn = "BASE"; //Gunnah no change this k?
@@ -29,8 +29,8 @@
    
    class Header {
       gameType = Coop;            // (https://community.bistudio.com/wiki/Multiplayer_Game_Types) for list if game types
-      minPlayers = 1;             //min # of players the mission supports, no change k bae
-      maxPlayers = 200;           //Max # of players the mission supports, no change k bae
+      minPlayers = 1;             //min # of players the mission supports, no change 
+      maxPlayers = 200;           //Max # of players the mission supports, no change 
       playerCountMultipleOf = 1; //Unknown
    };
 
