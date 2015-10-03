@@ -110,7 +110,9 @@ class RUS {
 			// ace equipment - what everyone should have
 			#define ace_default	{"ACE_fieldDressing",10}, \
 								{"ACE_morphine",1}, \
-								{"ACE_EarPlugs",1}
+								{"ACE_EarPlugs",1},\
+								{ACE_bodyBag,1}
+
 
 			//Override for a Medic					
 			#define ace_medic	{"ACE_fieldDressing",30}, \
