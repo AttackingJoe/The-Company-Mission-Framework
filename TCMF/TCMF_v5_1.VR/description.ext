@@ -19,7 +19,8 @@
    loadScreen = "logo.paa";//no touchy, unless you know what you're doing
    onLoadMission = "Add a description of your mission here.";//Change to your text   
    onLoadMissionTime = true;
-   
+//============================================================================================================ 
+     
    respawn = "BASE"; //Gunnah no change this k?
    respawnDelay = 5; //Like seriously dont fuck with this
    respawnDialog = 0; //this either
@@ -33,9 +34,9 @@
       maxPlayers = 200;           //Max # of players the mission supports, no change 
       playerCountMultipleOf = 1; //Unknown
    };
+//================================================================================================================
 
 
-//============================================================================================================   
 //if your not sure what you are doing dont touch this code block.
 
    class Extended_PreInit_EventHandlers {
@@ -52,21 +53,7 @@
          };
       };
    };
-   
-   class TB3_Settings {
-      class General {
-         version = 3;
-         processParams = 1;
-         enableSaving = 0;
-         missionMonitor = 1;
-         dynamicViewDistance = 1;
-         spectator = 1;
-         enableNameTags = 0; // nametags on(1) or off (0)
-         enableFlexiMenu = 0; // CBA Fleximenu options on(1) or off (0)
-      };
-   };   
-
-   
+    
 //============================================================================================================   
 
 // Group marker cfg

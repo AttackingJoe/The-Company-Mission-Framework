@@ -26,6 +26,7 @@ waitUntil { TB3_INIT };
 //Group Markers
 f_script_setGroupMarkers = [] execVM "tb3\f\groupMarkers\f_setLocalGroupMarkers.sqf";
 
+//Acre switches
 if (_acremain)then{
 	if (_acreaihear)then{
 		[true] call acre_api_fnc_setRevealToAI;
@@ -57,8 +58,6 @@ if (_acremain)then{
 		};
 	};
 };
-
-
 
 
 if (isServer) then {
