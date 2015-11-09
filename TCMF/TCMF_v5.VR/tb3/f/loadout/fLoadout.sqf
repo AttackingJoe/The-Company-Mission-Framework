@@ -7,7 +7,7 @@ _cfg = _this select 1;
 _gear  = _this select 2;
 
 //Remove the unit's current gear if they are a person and not a vehicle, because fuck vehicles. Those fucking cunts.
-if (_unit isKindOf "Man") then {[_unit] call tb3_fClearInventory;};
+if (_unit isKindOf "AllVehicles") then {[_unit] call tb3_fClearInventory;};
 
 //get the defined gear.
 TB3_GearPath = (missionConfigFile >> "TB3_Gear");
