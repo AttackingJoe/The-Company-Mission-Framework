@@ -26,8 +26,7 @@ class RUS {
 			//		SN			- Sniper
 			//		SP			- Spotter (for sniper) 
 			//		VC			- Vehicle crew 
-			//		PILJ			- Jet-Plane pilot / co-pilot 
-			//		PILH		- Helicopter pilot / co-pilot
+			//		PIL		    - Pilot
 			//		ENG			- Engineer
 			//
 			//		Vehicle Cargo Loadouts
@@ -111,7 +110,9 @@ class RUS {
 			// ace equipment - what everyone should have
 			#define ace_default	{"ACE_fieldDressing",10}, \
 								{"ACE_morphine",1}, \
-								{"ACE_EarPlugs",1}
+								{"ACE_EarPlugs",1},\
+								{ACE_bodyBag,1}
+
 
 			//Override for a Medic					
 			#define ace_medic	{"ACE_fieldDressing",30}, \
@@ -134,7 +135,7 @@ class RUS {
 			#define ap_mine "rhs_mine_pmn2_mag"
 			#define minedetector "MineDetector"
 			#define binoculars "Binocular"
-			#define range_finder "BWA3_Vector"
+			#define range_finder "rhs_pdu4"
 			#define laserd "Laserdesignator"
 			#define battery "Laserbatteries"
 			
@@ -162,6 +163,8 @@ class RUS {
 			#define rpg_backpack "rhs_assault_umbts"
 			#define pilot_backpack "rhs_assault_umbts"
 			#define engineer_backpack "B_Kitbag_sgg"
+			#define mortg_backpack "I_Mortar_01_weapon_F"
+			#define morta_backpack "I_Mortar_01_support_F"
 			
 			
 			//Vests
@@ -178,9 +181,9 @@ class RUS {
 			
 			//=== EQUIPMENT ===
 			//MUST BE ONE LINE
-			#define leader_equipment "ItemMap","ItemGPS","ItemCompass"//With GPS
-			#define default_equipment "ItemMap","ItemCompass"
-			#define crew_equipment "ItemMap","ItemGPS","ItemCompass","ace_NVG_Gen4" //With GPs and NVG for vic crews
+			#define leader_equipment "ItemWatch","ItemMap","ItemGPS","ItemCompass"//With GPS
+			#define default_equipment "ItemWatch","ItemMap","ItemCompass"
+			#define crew_equipment "ItemWatch","ItemMap","ItemGPS","ItemCompass","ace_NVG_Gen4" //With GPs and NVG for vic crews
 			//========================Class Loadouts Definitions========================
 			//================Platoon Leader==================
 			class PC {
@@ -317,18 +320,14 @@ class RUS {
 				secKit[] = {};
 			};
 			
-			//================Mortar Leader==================
-			class MOL {
+						//================Mortar Leader==================
+			class MOLG {
 				weapons[] = {rifle,binoculars};
 				magazines[] = {	}; //do not use if using specific allocation of magazines
-				backpack[] = {default_backpack};
+				backpack[] = {mortg_backpack};
 					backpackMagazines[] = {
 					};
 					backpackItems[] = {
-						ace_default,
-						{ace_epipen,1},
-						{ace_mrangetable,1}
-											
 					};
 				headgear[] = {leader_headgear};
 				uniform[] = {default_uniform};
@@ -336,13 +335,50 @@ class RUS {
 					};
 					uniformItems[] = {
 					    {smokegrenadewhite,2},
+						{grenade,2},
 						{long_range,1},
-						{short_range,1}
+						{short_range,1},					
+						ace_default,
+						{ACE_epinephrine,1},
+						{ace_mrangetable, 1}
 					};
 				goggles[] = {};
-				vest[] = {vest_leader};
+				vest[] = {vest_ftl_leader};
 					vestMagazines[] = {
-						{riflemag,8}
+						{riflemag,7}
+					};
+				assignedItems[] = {leader_equipment};
+				items[] = {	}; //do not use if using specific allocation of items
+				
+				priKit[] = {};
+				secKit[] = {};
+			};
+			//================Mortar Assist==================
+			class MOLA {
+				weapons[] = {rifle,binoculars};
+				magazines[] = {	}; //do not use if using specific allocation of magazines
+				backpack[] = {morta_backpack};
+					backpackMagazines[] = {
+					};
+					backpackItems[] = {	
+					};
+				headgear[] = {leader_headgear};
+				uniform[] = {default_uniform};
+					uniformMagazines[] = {
+					};
+					uniformItems[] = {
+					    {smokegrenadewhite,2},
+						{grenade,2},
+						{long_range,1},
+						{short_range,1},						
+						ace_default,
+						{ACE_epinephrine,1},
+						{ace_mrangetable, 1}
+					};
+				goggles[] = {};
+				vest[] = {vest_ftl_leader};
+					vestMagazines[] = {
+						{riflemag,7}
 					};
 				assignedItems[] = {leader_equipment};
 				items[] = {	}; //do not use if using specific allocation of items
@@ -787,40 +823,8 @@ class RUS {
 				priKit[] = {};
 				secKit[] = {};
 			};
-			//================Pilot Jet==================
-			class PILJ {
-				weapons[] = {smg};
-				magazines[] = {	}; //do not use if using specific allocation of magazines
-				backpack[] = {default_backpack};
-					backpackMagazines[] = {
-					};
-					backpackItems[] = {
-					    ace_default,
-						{ace_epipen,1},
-						{toolkit,1}
-					};
-				headgear[] = {pilot_headgear};
-				uniform[] = {default_uniform};
-					uniformMagazines[] = {
-					};
-					uniformItems[] = {
-					    {smokegrenadewhite,2},
-						{long_range,1},
-						{short_range,1}
-					};
-				goggles[] = {};
-				vest[] = {vest_pilot};
-					vestMagazines[] = {
-					    {smgmag,3}
-					};
-				assignedItems[] = {crew_equipment};
-				items[] = {	}; //do not use if using specific allocation of items
-				
-				priKit[] = {};
-				secKit[] = {};
-			};
-			//================Pilot Helicopter==================
-			class PILH {
+			//================Pilot==================
+			class PIL {
 				weapons[] = {smg};
 				magazines[] = {	}; //do not use if using specific allocation of magazines
 				backpack[] = {default_backpack};
