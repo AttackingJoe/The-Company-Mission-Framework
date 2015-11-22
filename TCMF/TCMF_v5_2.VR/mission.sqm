@@ -77,7 +77,7 @@ class Mission
 	randomSeed=11963703;
 	class Intel
 	{
-		briefingName="TCMF v5.1";
+		briefingName="TCMF v5.2";
 		overviewText="Made with TB3, edited by TC/IF Mission Making Teams";
 		resistanceWest=0;
 		startWeather=0;
