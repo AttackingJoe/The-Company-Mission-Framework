@@ -111,7 +111,8 @@ class EUG {
 			#define ace_default	{"ACE_fieldDressing",10}, \
 								{"ACE_morphine",1}, \
 								{"ACE_EarPlugs",1},\
-								{ACE_bodyBag,1}
+								{ACE_bodyBag,1},\
+								{"ACE_Flashlight_XL50",1}
 
 
 			//Override for a Medic					
@@ -119,7 +120,8 @@ class EUG {
 								{"ACE_morphine",15}, \
 								{"ACE_epinephrine",10}, \
 								{"ACE_bloodIV_500",6}, \
-								{"ACE_EarPlugs",1}
+								{"ACE_EarPlugs",1}, \
+								{"ACE_Flashlight_XL50",1}
 			
 			//Other ace
 			#define ace_epipen "ACE_epinephrine" // For PC, SL, FTL
